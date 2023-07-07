@@ -58,12 +58,13 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="z-10 text-center" id="gallery">
-        <h1 className="mt-16 mb-10 text-3xl font-bold text-black">
+      <div className="text-center" id="gallery">
+        <h1 className="mt-12 mb-8 text-3xl font-bold text-black">
           Gallery
         </h1>
       </div>
-      <div className="mt-10">
+      <div className="flex justify-center">
+      <div className="mt-5 w-6/12">
         <div className="max-w-5xl gap-5 p-5 pb-10 mx-auto mb-10 space-y-5 columns-3">
           {displayedImages.map((src, index) => (
             <div key={src} className="relative">
@@ -122,6 +123,7 @@ const Gallery = () => {
             Next
           </button>
         </div>
+      </div>
       </div>
     </>
   );
