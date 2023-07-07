@@ -21,7 +21,7 @@ export default function Home() {
     <CPMessage/>
     <SocialMedia/>
     <Gallery/>
-    {/* <Footer/> */}
+    <Footer/>
     <Twitter/>
     </>
   )

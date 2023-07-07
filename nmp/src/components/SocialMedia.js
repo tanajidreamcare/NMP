@@ -17,12 +17,12 @@ export default function SocialMedia() {
   return (
     <>
       {/* <Try /> */}
-      <div className="bg-[url('/social_bg_img.png')] py-24">
-        <div className="justify-center m-20 text-4xl font-extrabold md:flex">
+      <div className="bg-zinc-500 md:bg-[url('/social_bg_img.png')] md:py-24 py-5">
+        <div className="m-20 text-[24px] md:text-4xl font-extrabold md:justify-center md:flex text-white md:text-black">
           Social Media Feeds
         </div>
-        <div className="flex items-center justify-center">
-          <div className="flex justify-end w-4/12 mx-3">
+        <div className="items-center justify-center md:flex">
+          <div className="justify-end mx-3 md:flex md:w-4/12">
             <div className="p-5 bg-white border-2 rounded-lg">
               <div className="flex justify-center my-3">
                 <ImFacebook2 size={35} color="red" style={{ color: "blue" }} />
@@ -43,7 +43,7 @@ export default function SocialMedia() {
             </div>
           </div>
 
-          <div className="flex justify-center w-4/12">
+          <div className="justify-center p-3 my-10 md:flex md:w-4/12">
             <div className="p-5 bg-white border-2 rounded-lg">
               <div className="flex justify-center my-3 text-blue-500">
                 <FaTwitterSquare size={40} color="red" />
@@ -67,7 +67,7 @@ export default function SocialMedia() {
             </div>
           </div>
 
-          <div className="flex justify-start w-4/12">
+          <div className="justify-start p-3 my-10 md:flex md:w-4/12">
             <div className="p-5 bg-white border-2 rounded-lg">
               <div className="flex justify-center my-3 text-blue-500">
                 <GrUpdate size={35} color="red" />

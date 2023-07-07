@@ -32,11 +32,11 @@ function Footer() {
       </div>
       <div className="bg-[#15233E] w-full p-6 text-white">
         <div className="flex justify-center ">
-          <h1 className="me-4">Emergency: 112</h1>
-          <h1 className="me-4">Traffic Helpline : 7738393839</h1>
-          <h1 className="me-4">Senior Citizen Helpline : 1090</h1>
-          <h1 className="me-4">Coastal Helpline : 1093</h1>
-          <h1>Women Helpline : 103</h1>
+          <h1 className="cursor-pointer me-4">Emergency: 112</h1>
+          <h1 className="cursor-pointer me-4">Traffic Helpline : 7738393839</h1>
+          <h1 className="cursor-pointer me-4">Senior Citizen Helpline : 1090</h1>
+          <h1 className="cursor-pointer me-4">Coastal Helpline : 1093</h1>
+          <h1 className="cursor-pointer">Women Helpline : 103</h1>
         </div>
         <div className="flex justify-between ms-16">
           <div>
@@ -45,16 +45,16 @@ function Footer() {
             </h1>
             <div className="flex justify-end">
               <div>
-                <h1 className="me-[48px]">Press Release</h1>
-                <h1 className="me-[48px]">FAQ</h1>
-                <h1 className="me-[48px]">Martyrs</h1>
-                <h1 className="me-[48px]">Site Map</h1>
+                <h1 className="me-[48px] cursor-pointer">Press Release</h1>
+                <h1 className="me-[48px] cursor-pointer">FAQ</h1>
+                <h1 className="me-[48px] cursor-pointer">Martyrs</h1>
+                <h1 className="me-[48px] cursor-pointer">Site Map</h1>
               </div>
               <div>
-                <h1 className="me-[48px]">Senior Police Officers</h1>
-                <h1 className="me-[48px]">History</h1>
-                <h1 className="me-[48px]">Police Recruitment </h1>
-                <h1 className="me-[48px]">Disclaimer</h1>
+                <h1 className="me-[48px] cursor-pointer">Senior Police Officers</h1>
+                <h1 className="me-[48px] cursor-pointer">History</h1>
+                <h1 className="me-[48px] cursor-pointer">Police Recruitment </h1>
+                <h1 className="me-[48px] cursor-pointer">Disclaimer</h1>
               </div>
             </div>
           </div>
@@ -64,16 +64,16 @@ function Footer() {
             </h1>
             <div className="flex justify-end">
               <div>
-                <h1 className="me-[48px]">Safety Tips</h1>
-                <h1 className="me-[48px]">Citizen Wall</h1>
-                <h1 className="me-[48px]">Initiatives</h1>
-                <h1 className="me-[48px]">Licensing Unit</h1>
+                <h1 className="me-[48px] cursor-pointer">Safety Tips</h1>
+                <h1 className="me-[48px] cursor-pointer">Citizen Wall</h1>
+                <h1 className="me-[48px] cursor-pointer">Initiatives</h1>
+                <h1 className="me-[48px] cursor-pointer">Licensing Unit</h1>
               </div>
               <div>
-                <h1 className="me-[48px]">Missing Persons</h1>
-                <h1 className="me-[48px]">Unidentified Dead Bodies</h1>
-                <h1 className="me-[48px]">Useful websites </h1>
-                <h1 className="me-[48px]">Emergency Contacts</h1>
+                <h1 className="me-[48px] cursor-pointer">Missing Persons</h1>
+                <h1 className="me-[48px] cursor-pointer">Unidentified Dead Bodies</h1>
+                <h1 className="me-[48px] cursor-pointer">Useful websites </h1>
+                <h1 className="me-[48px] cursor-pointer">Emergency Contacts</h1>
               </div>
             </div>
           </div>
@@ -83,10 +83,10 @@ function Footer() {
             </h1>
             <div className="flex justify-end">
               <div>
-                <h1 className="me-[48px]">Tenders</h1>
-                <h1 className="me-[48px]">Online Complaint</h1>
-                <h1 className="me-[48px]">Lost / Found</h1>
-                <h1 className="me-[48px]">Right To Information</h1>
+                <h1 className="me-[48px] cursor-pointer">Tenders</h1>
+                <h1 className="me-[48px] cursor-pointer">Online Complaint</h1>
+                <h1 className="me-[48px] cursor-pointer">Lost / Found</h1>
+                <h1 className="me-[48px] cursor-pointer">Right To Information</h1>
               </div>
             </div>
           </div>
