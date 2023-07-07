@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const images = [
   "/gal_img1.png",
@@ -86,7 +88,7 @@ const Gallery = () => {
                 <Image
                   src={images[selectedImage]}
                   alt={`Image ${selectedImage + 1}`}
-                  // layout="responsive"
+                  layout="responsive"
                   className="h-[50%] w-full max-w-[70%]"
                   sizes="70vw"
                   height="500"
@@ -112,16 +114,16 @@ const Gallery = () => {
         </div>
         <div className="flex justify-center">
           <button
-            className="px-4 py-2 mx-2 font-semibold text-white bg-blue-500 rounded-md"
+            className="px-4 py-2 text-white  bg-slate-400 w-[65px] h-[56px]"
             onClick={handlePrevClick}
           >
-            Previous
+            <div className=""><FaArrowLeftLong size={35}/></div>
           </button>
           <button
-            className="px-4 py-2 mx-2 font-semibold text-white bg-blue-500 rounded-md"
+            className=" py-2 text-white bg-[#15233E] w-[113px] h-[56px]"
             onClick={handleNextClick}
           >
-            Next
+            <div className="flex justify-center"><FaArrowRightLong size={40}/></div>
           </button>
         </div>
       </div>

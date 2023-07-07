@@ -16,84 +16,98 @@ function Footer() {
   ];
   return (
     <div>
-      <div className="mt-[-24%]">
+      <div className="">
         <div className="w-full">
         <img className="w-full "  src={'/footerBanner.png'} />
         </div>
         <div className="bg-[#DDD] bg-opacity-80">
         <Marquee>
           {marqueeComp.map((images, index) => (
-            <div key={index} className="mx-10 p-0 justify-center flex items-center">
+            <div key={index} className="flex items-center justify-center p-0 mx-10">
               <img  className="p-2"  src={Object.values(images)[0]} />
             </div>
           ))}
         </Marquee>
         </div>
       </div>
-      <div className="bg-[#15233E] w-full p-6 text-white">
-        <div className="flex justify-center ">
-          <h1 className="cursor-pointer me-4">Emergency: 112</h1>
-          <h1 className="cursor-pointer me-4">Traffic Helpline : 7738393839</h1>
-          <h1 className="cursor-pointer me-4">Senior Citizen Helpline : 1090</h1>
-          <h1 className="cursor-pointer me-4">Coastal Helpline : 1093</h1>
-          <h1 className="cursor-pointer">Women Helpline : 103</h1>
+      <div className="bg-[#15233E] w-full p-6 text-white hidden sm:block">
+        <div className="w-full">
+          <div className="justify-center md:flex text-[12px]">
+            <div className="cursor-pointer me-4 ">Emergency: 112</div>
+            <div className="cursor-pointer me-4">
+              Traffic Helpline : 7738393839
+            </div>
+            <div className="cursor-pointer me-4">
+              Senior Citizen Helpline : 1090
+            </div>
+            <div className="cursor-pointer me-4">Coastal Helpline : 1093</div>
+            <div className="cursor-pointer">Women Helpline : 103</div>
+          </div>
         </div>
-        <div className="flex justify-between ms-16">
+        <div className="justify-start md:flex md:justify-between md:ms-16">
           <div>
-            <h1 className="mt-6 mb-4 text-lg underline underline-offset-8">
+            <div className="mt-6 mb-4 underline md:text-lg underline-offset-8 sm:font-semibold">
               NAVI MUMBAI POLICE
-            </h1>
-            <div className="flex justify-end">
+            </div>
+            <div className="justify-start md:flex md:justify-end text-[12px]">
               <div>
-                <h1 className="me-[48px] cursor-pointer">Press Release</h1>
-                <h1 className="me-[48px] cursor-pointer">FAQ</h1>
-                <h1 className="me-[48px] cursor-pointer">Martyrs</h1>
-                <h1 className="me-[48px] cursor-pointer">Site Map</h1>
+                <div className="me-[48px] cursor-pointer">Press Release</div>
+                <div className="me-[48px] cursor-pointer">FAQ</div>
+                <div className="me-[48px] cursor-pointer">Martyrs</div>
+                <div className="me-[48px] cursor-pointer">Site Map</div>
               </div>
               <div>
-                <h1 className="me-[48px] cursor-pointer">Senior Police Officers</h1>
-                <h1 className="me-[48px] cursor-pointer">History</h1>
-                <h1 className="me-[48px] cursor-pointer">Police Recruitment </h1>
-                <h1 className="me-[48px] cursor-pointer">Disclaimer</h1>
+                <div className="me-[48px] cursor-pointer">
+                  Senior Police Officers
+                </div>
+                <div className="me-[48px] cursor-pointer">History</div>
+                <div className="me-[48px] cursor-pointer">
+                  Police Recruitment{" "}
+                </div>
+                <div className="me-[48px] cursor-pointer">Disclaimer</div>
               </div>
             </div>
           </div>
           <div>
-            <h1 className="mt-6 mb-4 text-lg underline underline-offset-8">
+            <div className="mt-6 mb-4 underline md:text-lg underline-offset-8 sm:font-semibold">
               INFORMATION & SERVICES
-            </h1>
-            <div className="flex justify-end">
+            </div>
+            <div className="md:flex justify-end text-[12px] ">
               <div>
-                <h1 className="me-[48px] cursor-pointer">Safety Tips</h1>
-                <h1 className="me-[48px] cursor-pointer">Citizen Wall</h1>
-                <h1 className="me-[48px] cursor-pointer">Initiatives</h1>
-                <h1 className="me-[48px] cursor-pointer">Licensing Unit</h1>
+                <div className="me-[48px] cursor-pointer">Safety Tips</div>
+                <div className="me-[48px] cursor-pointer">Citizen Wall</div>
+                <div className="me-[48px] cursor-pointer">Initiatives</div>
+                <div className="me-[48px] cursor-pointer">Licensing Unit</div>
               </div>
               <div>
-                <h1 className="me-[48px] cursor-pointer">Missing Persons</h1>
-                <h1 className="me-[48px] cursor-pointer">Unidentified Dead Bodies</h1>
-                <h1 className="me-[48px] cursor-pointer">Useful websites </h1>
-                <h1 className="me-[48px] cursor-pointer">Emergency Contacts</h1>
+                <div className="me-[48px] cursor-pointer">Missing Persons</div>
+                <div className="me-[48px] cursor-pointer">
+                  Unidentified Dead Bodies
+                </div>
+                <div className="me-[48px] cursor-pointer">Useful websites </div>
+                <div className="me-[48px] cursor-pointer">Emergency Contacts</div>
               </div>
             </div>
           </div>
           <div>
-            <h1 className="mt-6 mb-4 text-lg underline underline-offset-8">
+            <div className="mt-6 mb-4 md:text-lg underline underline-offset-8 sm:text-[12px] sm:font-semibold">
               QUICK LINKS
-            </h1>
-            <div className="flex justify-end">
+            </div>
+            <div className="flex justify-start md:justify-end text-[12px]">
               <div>
-                <h1 className="me-[48px] cursor-pointer">Tenders</h1>
-                <h1 className="me-[48px] cursor-pointer">Online Complaint</h1>
-                <h1 className="me-[48px] cursor-pointer">Lost / Found</h1>
-                <h1 className="me-[48px] cursor-pointer">Right To Information</h1>
+                <div className="me-[48px] cursor-pointer">Tenders</div>
+                <div className="me-[48px] cursor-pointer">Online Complaint</div>
+                <div className="me-[48px] cursor-pointer">Lost / Found</div>
+                <div className="me-[48px] cursor-pointer">
+                  Right To Information
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex justify-between mx-16 mt-6">
+        <div className="mx-16 mt-6 md:flex md:justify-between">
           <div className="flex ">
-            <h1 className="me-2">Follow Us</h1>
+            <div className="me-2">Follow Us</div>
             <div className="rounded-full p-1 mx-1 border-[1px] border-white">
               <AiOutlineInstagram />
             </div>
@@ -104,24 +118,123 @@ function Footer() {
               <FiTwitter />
             </div>
           </div>
+        </div>
+        <div className="mx-16 my-2">
+          <hr />
+        </div>
+        <div className="w-full text-sm text-center sm-text-[10px]">
+          <div>
+            Copyright © 2023 Navi Mumbai Police | Developed By : Dreamcare
+            Developers
+          </div>
+        </div>
+      </div>
+
+      {/* ----------Mobile Screen-------------- */}
+      <div className="bg-[#15233E] w-full p-6 text-white md:hidden">
+
+        <div className="flex justify-start">
+          <div className="justify-start md:flex text-[12px]">
+            <div className="cursor-pointer">Emergency: 112</div>
+            <div className="cursor-pointer">
+              Traffic Helpline : 7738393839
+            </div>
+            <div className="cursor-pointer">
+              Senior Citizen Helpline : 1090
+            </div>
+            <div className="cursor-pointer">Coastal Helpline : 1093</div>
+            <div className="cursor-pointer">Women Helpline : 103</div>
+          </div>
+          <div className="ms-5">
+            <div className=" mb-4 underline underline-offset-8 text-[12px] sm:font-semibold">
+              QUICK LINKS
+            </div>
+            <div className="flex justify-start md:justify-end text-[12px]">
+              <div>
+                <div className="cursor-pointer">Tenders</div>
+                <div className="cursor-pointer">Online Complaint</div>
+                <div className="cursor-pointer">Lost / Found</div>
+                <div className="cursor-pointer">
+                  Right To Information
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className="flex items-center justify-center">
+          <div>
+            <div className="mt-6 mb-4 underline underline-offset-8 sm:font-semibold text-[12px]">
+              NAVI MUMBAI POLICE
+            </div>
+            <div className="justify-start text-[12px]">
+              <div>
+                <div className="cursor-pointer">Press Release</div>
+                <div className="me-[48px] cursor-pointer">FAQ</div>
+                <div className="me-[48px] cursor-pointer">Martyrs</div>
+                <div className="me-[48px] cursor-pointer">Site Map</div>
+              </div>
+              <div>
+                <div className="me-[48px] cursor-pointer">
+                  Senior Police Officers
+                </div>
+                <div className="me-[48px] cursor-pointer">History</div>
+                <div className="me-[48px] cursor-pointer">
+                  Police Recruitment{" "}
+                </div>
+                <div className="me-[48px] cursor-pointer">Disclaimer</div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div className="ms-7">
+            <div className="mt-6 mb-4 underline underline-offset-8 sm:font-semibold text-[12px]">
+              INFORMATION & SERVICES
+            </div>
+            <div className="md:flex justify-end text-[12px] ">
+              <div>
+                <div className="me-[48px] cursor-pointer">Safety Tips</div>
+                <div className="me-[48px] cursor-pointer">Citizen Wall</div>
+                <div className="me-[48px] cursor-pointer">Initiatives</div>
+                <div className="me-[48px] cursor-pointer">Licensing Unit</div>
+              </div>
+              <div>
+                <div className="me-[48px] cursor-pointer">Missing Persons</div>
+                <div className="me-[48px] cursor-pointer">
+                  Unidentified Dead Bodies
+                </div>
+                <div className="me-[48px] cursor-pointer">Useful websites </div>
+                <div className="me-[48px] cursor-pointer">Emergency Contacts</div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div className="mx-16 mt-6 md:flex md:justify-between">
           <div className="flex ">
-            <h1 className="me-2">Mobile App</h1>
+            <div className="me-2">Follow Us</div>
             <div className="rounded-full p-1 mx-1 border-[1px] border-white">
-              <AiOutlineApple />
+              <AiOutlineInstagram />
             </div>
             <div className="rounded-full p-1 mx-1 border-[1px] border-white">
-              <AiOutlineAndroid />
+              <AiOutlineFacebook />
+            </div>
+            <div className="rounded-full p-1 mx-1 border-[1px] border-white">
+              <FiTwitter />
             </div>
           </div>
         </div>
         <div className="mx-16 my-2">
           <hr />
         </div>
-        <div className="w-full text-sm text-center">
-          <h1>
+        <div className="w-full text-sm text-center sm-text-[10px]">
+          <div>
             Copyright © 2023 Navi Mumbai Police | Developed By : Dreamcare
             Developers
-          </h1>
+          </div>
         </div>
       </div>
     </div>

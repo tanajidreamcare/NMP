@@ -110,7 +110,7 @@ export default function BestServices() {
                       </div>
                     </div>
                     <div className="sm:text-left md:text-right">
-                      <div className="text-[12px] md:text-[24px] lg:text-xl font-bold mt-2 ml-2 md:ml-0 md:mt-0">
+                      <div className="text-[16px] md:text-[24px] lg:text-xl font-bold mt-2 ml-2 md:ml-0 md:mt-0">
                         {serviceName.name}
                       </div>
                       <div className="hidden text-xs font-normal sm:block md:text-sm">
