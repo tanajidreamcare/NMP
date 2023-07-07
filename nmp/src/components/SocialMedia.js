@@ -18,7 +18,7 @@ export default function SocialMedia() {
     <>
       {/* <Try /> */}
       <div className="bg-[url('/social_bg_img.png')] py-24">
-        <div className="flex justify-center m-20 text-4xl font-extrabold">
+        <div className="justify-center m-20 text-4xl font-extrabold md:flex">
           Social Media Feeds
         </div>
         <div className="flex items-center justify-center">

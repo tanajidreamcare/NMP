@@ -40,13 +40,13 @@ export default function BestServices() {
     {
       index: 5,
       name: "Accident Compensation",
-      message: "Amplifying Safety: Empowering Communities, Ensuring Peace",
+      message: "Comensation of Accident",
       icon: <AiFillFileAdd size={35} />,
     },
     {
       index: 6,
       name: "Unindentified Dead Bodies",
-      message: "Amplifying Safety: Empowering Communities, Ensuring Peace",
+      message: "Un-identified dead boadies",
       icon: <GiDeadlyStrike size={35} />,
     },
   ];
@@ -91,72 +91,79 @@ export default function BestServices() {
   ];
   return (
     <>
-      <div className="mt-40 mb-10 text-center">
-        <div className="mb-10 text-3xl font-extrabold leading-9">
+      <div className="mt-10 text-center md:mb-10 lg:mt-40 bg-green-50">
+        <div className="mb-10 md:text-3xl font-extrabold leading-9 sm:text-[24px]">
           Our Best Services
         </div>
-        <div className="flex justify-center w-full">
-          <div className="flex justify-center w-4/12">
+        <div className="flex justify-center w-full p-3">
+          <div className="flex justify-center md:w-4/12 w-[138px] mx-2">
             <div>
               {servicesName1.map((serviceName) => (
-                <div className="justify-center " key={serviceName.index}>
+                <div className="text-left md:justify-center" key={serviceName.index}>
                   <div className="flex cursor-pointer">
-                    <div className="text-right">
-                      <div className="text-2xl font-bold">
+                  <div className="mt-1 my-14 md:mx-2 md:hidden md:my-0">
+                      <div className="flex justify-center w-16 h-16 bg-orange-500 rounded-full cursor-pointer hover:bg-sky-900 ">
+                        <div className="flex items-center text-white">
+                          {serviceName.icon}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="sm:text-left md:text-right">
+                      <div className="text-[16px] md:text-[24px] lg:text-2xl font-bold mt-2 ml-2 md:ml-0 md:mt-0">
                         {serviceName.name}
                       </div>
-                      <div className="text-xs font-normal">
+                      <div className="hidden text-xs font-normal sm:block md:text-[16px]">
                         {serviceName.message}
                       </div>
                     </div>
-                    <div className="mx-2 mt-1">
-                      <div className="flex justify-center w-16 h-16 bg-orange-500 rounded-full cursor-pointer hover:bg-sky-900">
+                    <div className="hidden mx-2 mt-1 md:block">
+                      <div className="flex justify-center md:w-16 md:h-16 w-[50px] h-[50px] bg-orange-500 rounded-full cursor-pointer hover:bg-sky-900">
                         <div className="flex items-center text-white">
                           {serviceName.icon}
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="my-4 font-extrabold">
+                  <div className="hidden my-4 font-extrabold md:block">
                     <hr />
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="w-2/12 mx-2 ">
+          <div className="mx-2 sm:w-1/12 md:w-2/12">
             <Image
               src="/bestService_img.png"
               width={200}
               height={50}
-              className="object-cover"
+              className="hidden object-cover sm:block"
               alt="Picture of the Police Officer"
             />
           </div>
-          <div className="flex justify-center w-4/12">
+          <div className="flex justify-center md:w-4/12 w-[138px] mx-2 ">
             <div>
               {servicesName2.map((serviceName) => (
                 <div className="justify-center " key={serviceName.index}>
-                  <div className="flex">
-                  <div className="mx-2 mt-1">
+                  <div className="flex ">
+                  <div className="mx-2 mt-1 my-14 md:my-0">
                       <div className="flex justify-center w-16 h-16 bg-orange-500 rounded-full cursor-pointer hover:bg-sky-900 ">
-                        <div className="flex items-center">
+                        <div className="flex items-center text-white">
                           {serviceName.icon}
                         </div>
                       </div>
                     </div>
                     <div className="text-left">
                       
-                      <div className="text-2xl font-bold">
+                      <div className="text-[16px] md:text-2xl font-bold mt-2 ml-2 md:ml-0 md:mt-0">
                         {serviceName.name}
                       </div>
-                      <div className="text-xs font-normal">
+                      <div className="hidden text-xs font-normal sm:block">
                         {serviceName.message}
                       </div>
                     </div>
                     
                   </div>
-                  <div className="my-4 font-extrabold">
+                  <div className="hidden my-4 font-extrabold md:block">
                     <hr />
                   </div>
                 </div>

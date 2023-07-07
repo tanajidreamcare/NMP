@@ -11,13 +11,13 @@ import Twitter from "../components/Twitter";
 export default function Home() {
   return (
     <>
-    <Navbar/>
-    <Carousel/>
-    <BestServices/>
-    <CPMessage/>
+    {/* <Navbar/> */}
+    {/* <Carousel/> */}
+    {/* <BestServices/> */}
+    {/* <CPMessage/> */}
     <SocialMedia/>
-    <Gallery/>
-    <Footer/>
+    {/* <Gallery/> */}
+    {/* <Footer/> */}
     <Twitter/>
     </>
   )
