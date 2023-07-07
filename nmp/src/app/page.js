@@ -1,12 +1,12 @@
 "use client";
-import BestServices from "./BestServices";
-import Carousel from "./Carousel";
-import Navbar from "./Navbar";
-import CPMessage from "./CPMessage";
-import SocialMedia from "./SocialMedia";
-import Gallery from "./Gallery";
-import Footer from "./Footer";
-import Twitter from "./Twitter";
+import BestServices from "../components/BestServices";
+import Carousel from "../components/Carousel";
+import Navbar from "../components/Navbar";
+import CPMessage from "../components/CPMessage";
+import SocialMedia from "../components/SocialMedia";
+import Gallery from "../components/Gallery";
+import Footer from "../components/Footer";
+import Twitter from "../components/Twitter";
 
 export default function Home() {
   return (
