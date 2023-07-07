@@ -17,8 +17,8 @@ export default function SocialMedia() {
   return (
     <>
       {/* <Try /> */}
-      <div className="bg-zinc-500 md:bg-[url('/social_bg_img.png')] md:py-24 py-5">
-        <div className="m-20 text-[24px] md:text-4xl font-extrabold md:justify-center md:flex text-white md:text-black">
+      <div className="bg-zinc-500 md:bg-[url('/social_bg_img.png')] py-5">
+        <div className="mx-20 mt-5 text-[24px] md:text-4xl font-extrabold md:justify-center md:flex text-white md:text-white">
           Social Media Feeds
         </div>
         <div className="items-center justify-center md:flex">
@@ -84,9 +84,9 @@ export default function SocialMedia() {
                 >
                   <div onMouseOver={stopScroll} onMouseOut={startScroll}>
                     <div className="mt-1 card">
-                      <div className="card-body news-card">
+                      <div className="card-body news-card py-5 px-5 border-[1px]  ">
                         <a href="#" target="_blank" className="web-link2">
-                          Hello Welcome to the Navi Mumbai Police
+                          Hello Welcome to the Navi Mumbai Police Hello Welcome to the Navi Mumbai Police Hello Welcome to the Navi Mumbai Police Hello Welcome to the Navi Mumbai Police
                         </a>
                       </div>
                     </div>

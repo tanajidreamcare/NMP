@@ -10,7 +10,7 @@ function Footer() {
   const marqueeComp = [
     { image1: "/digitalIndia_img.png" },
     { image2: "/G20_img.png" },
-    { image3: "/nmp_logo_img.png" },
+    { image3: "/gal_img11.png" },
     { image4: "/mahadbt_img.png" },
     { image5: "/startupIndia_img.png" },
   ];
@@ -18,13 +18,13 @@ function Footer() {
     <div>
       <div className="mt-[-24%]">
         <div className="w-full">
-        <Image className="w-full " width={100} height={80} src={'/gal_img10.png'} />
+        <img className="w-full "  src={'/footerBanner.png'} />
         </div>
-        <div className="bg-[#DDD]">
+        <div className="bg-[#DDD] bg-opacity-80">
         <Marquee>
           {marqueeComp.map((images, index) => (
-            <div key={index} className="mx-10 bg-[#DDD] ">
-              <Image sizes="100" className="bg-[#DDD]" height={80} width={100} src={Object.values(images)[0]} />
+            <div key={index} className="mx-10 p-0 justify-center flex items-center">
+              <img  className="p-2"  src={Object.values(images)[0]} />
             </div>
           ))}
         </Marquee>

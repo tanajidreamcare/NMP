@@ -58,7 +58,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="bg-zinc-100">
+      <div className="">
         <div className="text-center " id="gallery">
         <h1 className="mt-12 mb-8 text-3xl font-bold text-black">
           Gallery
