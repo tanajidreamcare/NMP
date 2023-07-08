@@ -63,7 +63,7 @@ const Gallery = () => {
             Gallery
           </h1>
         </div>
-        <div className=" h-screen">
+        <div className="h-screen ">
           <div className="mt-5 w-full h-[70%] flex justify-center">
             <div className="relative w-[70%] h-[95%] rounded-lg flex items-center justify-center">
               {displayedImages.map((src, index) => (
@@ -74,11 +74,11 @@ const Gallery = () => {
                     // layout="responsive"
                     height="200"
                     width="200"
-                    className="w-full h-full object-cover rounded-lg"
+                    className="object-cover w-full h-full rounded-lg"
                     onClick={() => handleImageClick(index + startIndex)} />
-                </div><div className="md:absolute bg-black bg-opacity-95 top-0 left-0 flex justify-center items-center h-full w-full md:opacity-0 hover:opacity-100 transition-all duration-500">
-                    <div className="md:absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <div className=" text-white px-1 text-center">
+                </div><div className="top-0 left-0 flex items-center justify-center w-full h-full transition-all duration-500 bg-black md:absolute bg-opacity-95 md:opacity-0 hover:opacity-100">
+                    <div className="z-20 transform -translate-x-1/2 -translate-y-1/2 md:absolute top-1/2 left-1/2">
+                      <div className="px-1 text-center text-white ">
                         {displayedImages.title}
                       </div>
                     </div>
@@ -135,7 +135,7 @@ const Gallery = () => {
           <div className="relative w-[70%] h-[55%] rounded-lg flex items-center justify-center">
             {images.map((image, i) => (
             <div className={`absolute  rounded-lg ${image.prop} `}>
-              <img className="object-cover h-full w-full" src={image.path} alt={`Image ${i + 1}`}/>
+              <img className="object-cover w-full h-full" src={image.path} alt={`Image ${i + 1}`}/>
             </div>     
             ))}     
           </div>

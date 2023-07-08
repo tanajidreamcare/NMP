@@ -22,7 +22,7 @@ export default function SocialMedia() {
           Social Media Feeds
         </div>
         <div className="items-center justify-center md:flex">
-          <div className="justify-end mx-3 md:flex md:w-4/12">
+          <div className="justify-end mx-3 mt-10 md:mt-0 md:flex md:w-4/12">
             <div className="p-5 bg-white border-2 rounded-lg">
               <div className="flex justify-center my-3">
                 <ImFacebook2 size={35} color="red" style={{ color: "blue" }} />
@@ -45,8 +45,8 @@ export default function SocialMedia() {
 
           <div className="justify-center p-3 my-10 md:flex md:w-4/12">
             <div className="p-5 bg-white border-2 rounded-lg">
-              <div className="flex justify-center my-3 text-blue-500">
-                <FaTwitterSquare size={40} color="red" />
+              <div className="flex justify-center my-3 text-sky-500">
+                <FaTwitterSquare size={40}/>
               </div>
               <hr className="border-2 border-solid" />
               <div className="my-3 font-bold text-center">
@@ -69,8 +69,8 @@ export default function SocialMedia() {
 
           <div className="justify-start p-3 my-10 md:flex md:w-4/12">
             <div className="p-5 bg-white border-2 rounded-lg">
-              <div className="flex justify-center my-3 text-blue-500">
-                <GrUpdate size={35} color="red" />
+              <div className="flex justify-center my-3 text-sky-500">
+                <GrUpdate size={35}/>
               </div>
               <hr className="border-2 border-solid" />
               <div className="my-3 font-bold text-center">Latest Update</div>

@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex fixed z-20 items-center justify-between w-full px-2 bg-white md:flex-row">
+      <nav className="fixed z-20 flex items-center justify-between w-full px-2 bg-white md:flex-row">
         <div className="flex items-center">
           <img
             src="/logo.png"
@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center justify-around mt-4 md:mt-0">
-          <div className="hidden md:flex justify-around">
+          <div className="justify-around hidden md:flex">
             <ul className="flex flex-col mt-[2px] text-[1em] w-11/12 mr-5 space-y-2 md:flex-row md:space-y-0 md:space-x-4 text-sky-900">
               <li className="inline-flex font-medium leading-[28px] cursor-pointer">
                 Home
@@ -55,7 +55,7 @@ const Navbar = () => {
               <li onMouseEnter={() => setaboutUsToggle(true)} onMouseLeave={() => setaboutUsToggle(false)} className={`relative ${aboutUsToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 About Us
                 {aboutUsToggle &&
-                  <div className="absolute -left-5 z-50">
+                  <div className="absolute z-50 -left-5">
                     <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
                       {aboutUs.map((about, i) => (
                         <li className="hover:text-[#E7581A] w-48" key={i}>{about}</li>
@@ -67,7 +67,7 @@ const Navbar = () => {
               <li onMouseEnter={() => setreportUsToggle(true)} onMouseLeave={() => setreportUsToggle(false)} className={`relative ${reportUsToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 Report Us
                 {reportUsToggle &&
-                  <div className="absolute -left-5 z-50">
+                  <div className="absolute z-50 -left-5">
                     <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
                       {ReportUs.map((report, i) => (
                         <li className="hover:text-[#E7581A] w-48" key={i}>{report}</li>
@@ -79,7 +79,7 @@ const Navbar = () => {
               <li onMouseEnter={() => setSpecialUnits1Toggle(true)} onMouseLeave={() => setSpecialUnits1Toggle(false)} className={`relative ${SpecialUnits1Toggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 Special Units
                 {SpecialUnits1Toggle &&
-                  <div className="absolute -left-80 z-50">
+                  <div className="absolute z-50 -left-80">
                     <ul className="text-sky-900 px-6 py-2 flex border-[1px] bg-white rounded-lg">
                       <div>
                         {SpecialUnits1.map((special, i) => (
@@ -104,7 +104,7 @@ const Navbar = () => {
               <li onMouseEnter={() => setCitizenCornerToggle(true)} onMouseLeave={() => setCitizenCornerToggle(false)} className={`relative ${CitizenCornerToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 Citizen Corner
                 {CitizenCornerToggle &&
-                  <div className="absolute -left-36 z-50">
+                  <div className="absolute z-50 -left-36">
                     <ul className="text-sky-900 px-6 py-2 flex border-[1px] bg-white rounded-lg">
                       <div>
                         {CitizenCorner.map((special, i) => (
@@ -123,7 +123,7 @@ const Navbar = () => {
               <li onMouseEnter={() => setPoliceCornerToggle(true)} onMouseLeave={() => setPoliceCornerToggle(false)} className={`relative ${PoliceCornerToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 Police Corner
                 {PoliceCornerToggle &&
-                  <div className="absolute -left-5 z-50">
+                  <div className="absolute z-50 -left-5">
                     <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
                       {PoliceCorner.map((report, i) => (
                         <li className="hover:text-[#E7581A] w-56" key={i}>{report}</li>
@@ -135,7 +135,7 @@ const Navbar = () => {
               <li onMouseEnter={() => setContactUsToggle(true)} onMouseLeave={() => setContactUsToggle(false)} className={`relative ${ContactUsToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 Contact Us
                 {ContactUsToggle &&
-                  <div className="absolute -left-10 z-50">
+                  <div className="absolute z-50 -left-10">
                     <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
                       {ContactUs.map((report, i) => (
                         <li className="hover:text-[#E7581A] w-44" key={i}>{report}</li>
@@ -178,7 +178,7 @@ const Navbar = () => {
                   </svg>
                 </button>
                 {isDropdownOpen && (
-                  <div className="absolute -left-2  py-2 mt-2 bg-white rounded shadow">
+                  <div className="absolute py-2 mt-2 bg-white rounded shadow -left-2">
                     <ul className="text-black">
                       <li
                         className="px-4 py-2 cursor-pointer hover:bg-white"
@@ -233,7 +233,7 @@ const Navbar = () => {
               </svg>
             </button>
             {isDropdownOpen && (
-              <div className="absolute -left-2 -top-2 py-2 mt-2 bg-white rounded shadow">
+              <div className="absolute py-2 mt-2 bg-white rounded shadow -left-2 -top-2">
                 <ul className="text-black">
                   <li
                     className="px-4 py-2 cursor-pointer hover:bg-white"
@@ -293,7 +293,7 @@ const Navbar = () => {
 
             {isMenuOpen && (
               <div className="absolute top-[115px] left-0 right-0 bg-white border-b border-gray-200">
-                <ul className="text-sky-900 text-center">
+                <ul className="text-center text-sky-900">
                   <li className="px-4 py-2 cursor-pointer hover:bg-white">
                     Home
                   </li>

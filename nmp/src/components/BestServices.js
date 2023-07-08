@@ -104,8 +104,8 @@ export default function BestServices() {
   ];
   return (
     <>
-      <div className="text-center md:mb-10  bg-green-50">
-        <div className="mb-10 pt-10 md:text-3xl font-extrabold leading-9 sm:text-[24px]">
+      <div className="text-center md:mb-10 bg-green-50">
+        <div className="mb-10 pt-10 md:text-3xl font-extrabold leading-9 text-[24px] text-[#15233E]">
           Our Best Services
         </div>
         <div className="flex justify-center w-full p-3">
@@ -122,10 +122,10 @@ export default function BestServices() {
                       </div>
                     </div>
                     <div className="sm:text-left md:text-right">
-                      <div className="text-[16px] md:text-[24px] lg:text-xl font-bold mt-2 ml-2 md:ml-0 md:mt-0">
+                      <div className="text-[16px] md:text-[24px] lg:text-xl font-bold mt-2 ml-2 md:ml-0 md:mt-0 text-[#15233E]">
                         {serviceName.name}
                       </div>
-                      <div className="hidden text-xs font-normal sm:block md:text-sm">
+                      <div className="hidden text-xs font-normal sm:block md:text-sm text-[#15233E]">
                         {serviceName.message}
                       </div>
                     </div>
@@ -144,7 +144,7 @@ export default function BestServices() {
               ))}
             </div>
           </div>
-          <div className="mx-2 sm:w-1/12 md:w-2/12  flex justify-center ">
+          <div className="flex justify-center mx-2 sm:w-1/12 md:w-2/12 ">
             <Image
               src="/bestService_img.png"
               width={200}
@@ -166,10 +166,10 @@ export default function BestServices() {
                       </div>
                     </div>
                     <div className="text-left">
-                      <div className="text-[16px] md:text-xl font-bold mt-2 ml-2 md:ml-0 md:mt-0">
+                      <div className="text-[16px] md:text-xl font-bold mt-2 ml-2 md:ml-0 md:mt-0 text-[#15233E]">
                         {serviceName.name}
                       </div>
-                      <div className="hidden text-xs md:text-sm font-normal sm:block md:text-[16px]">
+                      <div className="hidden text-xs md:text-sm font-normal sm:block md:text-[16px] text-[#15233E]">
                         {serviceName.message}
                       </div>
                     </div>

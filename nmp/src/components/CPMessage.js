@@ -6,7 +6,7 @@ export default function CPMessage() {
   return (
     <>
     <div className="py-5 md:py-24 bg-sky-950">
-      <div className="justify-center w-full md:flex">
+      <div className="justify-center w-full h-full md:flex">
       <div className="flex items-center justify-center">
       <div className="text-[24px] font-extrabold leading-9 text-white md:hidden">Meet The Chief</div>
       </div>
@@ -18,7 +18,7 @@ export default function CPMessage() {
             width={228}
             height={368}
             // layout="responsive"
-            className="w-[228px] h-[368px]"
+            className="w-[228px] h-[368px] md:h-[570px] md:w-[361px]"
             alt="Commissioner of Police Navi Mumbai"
             />
           </div>
@@ -28,14 +28,14 @@ export default function CPMessage() {
       <div className="mx-10 md:w-4/12">
         <div className="text-left">
           
-          <div className="hidden text-4xl font-extrabold leading-9 text-white sm:block">Meet The Chief</div>
+          <div className="hidden text-[40px] font-extrabold leading-9 text-white sm:block">Meet The Chief</div>
             
           
           <br/>
           <br/>
-          <div className="text-lg text-white">Namaskar Navi Mumbaikars.!</div>
+          <div className="text-white md:text-lg">Namaskar Navi Mumbaikars.!</div>
           <br/>
-          <div className="text-sm leading-5 text-justify text-white">
+          <div className="text-sm leading-6 text-justify text-white md:text-lg">
             Our vibrant city, known for its thriving economy and diverse communities, 
             is home to conscientious citizens who actively contribute to the governance
              and well-being of our society. As the head of the Navi Mumbai Police Force,
@@ -53,7 +53,7 @@ export default function CPMessage() {
                 Police's motto: “SADRAKSHANAY KHALNIGRAHANAY”.
           </div>
           <br/>
-          <div className="text-lg text-white">
+          <div className="text-lg text-white md:text-2xl">
             Jai Hind.!
             <br/>
             Commissionar of Police, Navi Mumbai
