@@ -37,73 +37,73 @@ function Footer() {
       <div className="bg-[#15233E] w-full p-6 text-white hidden sm:block">
         <div className="w-full">
           <div className="justify-center md:flex text-[12px]">
-            <div className="cursor-pointer me-4 ">Emergency: 112</div>
-            <div className="cursor-pointer me-4">
-              Traffic Helpline : 7738393839
+            <div className="cursor-pointer me-4 hover:text-[#E7581A]">{t('emergency')}: 112</div>
+            <div className="cursor-pointer me-4 hover:text-[#E7581A]">
+              {t('traffic_helpline')} : 7738393839
             </div>
-            <div className="cursor-pointer me-4">
-              Senior Citizen Helpline : 1090
+            <div className="cursor-pointer me-4 hover:text-[#E7581A]">
+              {t('senior_citizen_helpline')} : 1090
             </div>
-            <div className="cursor-pointer me-4">Coastal Helpline : 1093</div>
-            <div className="cursor-pointer">Women Helpline : 103</div>
+            <div className="cursor-pointer me-4 hover:text-[#E7581A]">{t('costal_helpline')} : 1093</div>
+            <div className="cursor-pointer hover:text-[#E7581A]">{t('women_helpline')} : 103</div>
           </div>
         </div>
         <div className="justify-start md:flex md:justify-between md:ms-16">
           <div>
-            <div className="mt-6 mb-4 underline md:text-lg underline-offset-8 sm:font-semibold">
-              NAVI MUMBAI POLICE
+            <div className="mt-6 mb-4 underline md:text-lg underline-offset-8 sm:font-semibold ">
+              {t('navi_mumbai_police')}
             </div>
             <div className="justify-start md:flex md:justify-end text-[12px]">
               <div>
-                <div className="me-[48px] cursor-pointer">Press Release</div>
-                <div className="me-[48px] cursor-pointer">FAQ</div>
-                <div className="me-[48px] cursor-pointer">Martyrs</div>
-                <div className="me-[48px] cursor-pointer">Site Map</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('press_release')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('faqs')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('martyrs')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('site_map')}</div>
               </div>
               <div>
-                <div className="me-[48px] cursor-pointer">
-                  Senior Police Officers
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">
+                  {t('senior_police_officers')}
                 </div>
-                <div className="me-[48px] cursor-pointer">History</div>
-                <div className="me-[48px] cursor-pointer">
-                  Police Recruitment{" "}
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('history')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">
+                  {t('police_recruitments')}
                 </div>
-                <div className="me-[48px] cursor-pointer">Disclaimer</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('disclaimer')}</div>
               </div>
             </div>
           </div>
           <div>
             <div className="mt-6 mb-4 underline md:text-lg underline-offset-8 sm:font-semibold">
-              INFORMATION & SERVICES
+              {t('info_services')}
             </div>
             <div className="md:flex justify-end text-[12px] ">
               <div>
-                <div className="me-[48px] cursor-pointer">Safety Tips</div>
-                <div className="me-[48px] cursor-pointer">Citizen Wall</div>
-                <div className="me-[48px] cursor-pointer">Initiatives</div>
-                <div className="me-[48px] cursor-pointer">Licensing Unit</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('safety_tips')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('citizen_wall')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('initiative')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('licensing_unit')}</div>
               </div>
               <div>
-                <div className="me-[48px] cursor-pointer">Missing Persons</div>
-                <div className="me-[48px] cursor-pointer">
-                  Unidentified Dead Bodies
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('missing_person')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">
+                  {t('unidentified_dead_bodies')}
                 </div>
-                <div className="me-[48px] cursor-pointer">Useful websites </div>
-                <div className="me-[48px] cursor-pointer">Emergency Contacts</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('useful_website')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('emergency_contacts')}</div>
               </div>
             </div>
           </div>
           <div>
             <div className="mt-6 mb-4 md:text-lg underline underline-offset-8 sm:text-[12px] sm:font-semibold">
-              QUICK LINKS
+              {t('quick_links')}
             </div>
             <div className="flex justify-start md:justify-end text-[12px]">
               <div>
-                <div className="me-[48px] cursor-pointer">Tenders</div>
-                <div className="me-[48px] cursor-pointer">Online Complaint</div>
-                <div className="me-[48px] cursor-pointer">Lost / Found</div>
-                <div className="me-[48px] cursor-pointer">
-                  Right To Information
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('tenders')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('online_complaint')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">{t('lost_found')}</div>
+                <div className="me-[48px] cursor-pointer hover:text-[#E7581A]">
+                  {t('right_to_info')}
                 </div>
               </div>
             </div>
@@ -111,14 +111,14 @@ function Footer() {
         </div>
         <div className="mx-16 mt-6 md:flex md:justify-between">
           <div className="flex ">
-            <div className="me-2">Follow Us</div>
-            <div className="rounded-full p-1 mx-1 border-[1px] border-white">
+            <div className="me-2">{t('follow_us')}</div>
+            <div className="rounded-full p-1 mx-1 border-[1px] border-white hover:text-[#E7581A]">
               <AiOutlineInstagram />
             </div>
-            <div className="rounded-full p-1 mx-1 border-[1px] border-white">
+            <div className="rounded-full p-1 mx-1 border-[1px] border-white hover:text-[#E7581A]">
               <AiOutlineFacebook />
             </div>
-            <div className="rounded-full p-1 mx-1 border-[1px] border-white">
+            <div className="rounded-full p-1 mx-1 border-[1px] border-white hover:text-[#E7581A]">
               <FiTwitter />
             </div>
           </div>
@@ -128,8 +128,7 @@ function Footer() {
         </div>
         <div className="w-full text-sm text-center sm-text-[10px]">
           <div>
-            Copyright © 2023 Navi Mumbai Police | Developed By : Dreamcare
-            Developers
+            {t('copyright')} © 2023 {t('navi_mumbai_police')} | {t('developed_by')} : {t('dreamcare_developers')}
           </div>
         </div>
       </div>
@@ -139,27 +138,27 @@ function Footer() {
 
         <div className="flex justify-start">
           <div className="justify-start md:flex text-[12px]">
-            <div className="cursor-pointer">Emergency: 112</div>
+            <div className="cursor-pointer">{t('emergency')}: 112</div>
             <div className="cursor-pointer">
-              Traffic Helpline : 7738393839
+            {t('traffic_helpline')} : 7738393839
             </div>
             <div className="cursor-pointer">
-              Senior Citizen Helpline : 1090
+            {t('senior_citizen_helpline')} : 1090
             </div>
-            <div className="cursor-pointer">Coastal Helpline : 1093</div>
-            <div className="cursor-pointer">Women Helpline : 103</div>
+            <div className="cursor-pointer">{t('costal_helpline')} : 1093</div>
+            <div className="cursor-pointer">{t('women_helpline')} : 103</div>
           </div>
           <div className="ms-5">
             <div className=" mb-4 underline underline-offset-8 text-[12px] sm:font-semibold">
-              QUICK LINKS
+            {t('quick_links')}
             </div>
             <div className="flex justify-start md:justify-end text-[12px]">
               <div>
-                <div className="cursor-pointer">Tenders</div>
-                <div className="cursor-pointer">Online Complaint</div>
-                <div className="cursor-pointer">Lost / Found</div>
+                <div className="cursor-pointer">{t('tenders')}</div>
+                <div className="cursor-pointer">{t('online_complaint')}</div>
+                <div className="cursor-pointer">{t('lost_found')}</div>
                 <div className="cursor-pointer">
-                  Right To Information
+                {t('right_to_info')}
                 </div>
               </div>
             </div>
@@ -171,24 +170,24 @@ function Footer() {
         <div className="flex items-center justify-center">
           <div>
             <div className="mt-6 mb-4 underline underline-offset-8 sm:font-semibold text-[12px]">
-              NAVI MUMBAI POLICE
+            {t('navi_mumbai_police')}
             </div>
             <div className="justify-start text-[12px]">
               <div>
-                <div className="cursor-pointer">Press Release</div>
-                <div className="me-[48px] cursor-pointer">FAQ</div>
-                <div className="me-[48px] cursor-pointer">Martyrs</div>
-                <div className="me-[48px] cursor-pointer">Site Map</div>
+                <div className="cursor-pointer">{t('press_release')}</div>
+                <div className="me-[48px] cursor-pointer">{t('faqs')}</div>
+                <div className="me-[48px] cursor-pointer">{t('martyrs')}</div>
+                <div className="me-[48px] cursor-pointer">{t('site_map')}</div>
               </div>
               <div>
                 <div className="me-[48px] cursor-pointer">
-                  Senior Police Officers
+                {t('senior_police_officers')}
                 </div>
-                <div className="me-[48px] cursor-pointer">History</div>
+                <div className="me-[48px] cursor-pointer">{t('history')}</div>
                 <div className="me-[48px] cursor-pointer">
-                  Police Recruitment{" "}
+                {t('police_recruitments')}
                 </div>
-                <div className="me-[48px] cursor-pointer">Disclaimer</div>
+                <div className="me-[48px] cursor-pointer">{t('disclaimer')}</div>
               </div>
             </div>
           </div>
@@ -196,22 +195,22 @@ function Footer() {
           
           <div className="ms-7">
             <div className="mt-6 mb-4 underline underline-offset-8 sm:font-semibold text-[12px]">
-              INFORMATION & SERVICES
+              {t('info_services')}
             </div>
             <div className="md:flex justify-end text-[12px] ">
               <div>
-                <div className="me-[48px] cursor-pointer">Safety Tips</div>
-                <div className="me-[48px] cursor-pointer">Citizen Wall</div>
-                <div className="me-[48px] cursor-pointer">Initiatives</div>
-                <div className="me-[48px] cursor-pointer">Licensing Unit</div>
+                <div className="me-[48px] cursor-pointer">{t('safety_tips')}</div>
+                <div className="me-[48px] cursor-pointer">{t('citizen_wall')}</div>
+                <div className="me-[48px] cursor-pointer">{t('initiative')}</div>
+                <div className="me-[48px] cursor-pointer">{t('licensing_unit')}</div>
               </div>
               <div>
-                <div className="me-[48px] cursor-pointer">Missing Persons</div>
+                <div className="me-[48px] cursor-pointer">{t('missing_persons')}</div>
                 <div className="me-[48px] cursor-pointer">
-                  Unidentified Dead Bodies
+                  {t('unidentified_dead_bodies')}
                 </div>
-                <div className="me-[48px] cursor-pointer">Useful websites </div>
-                <div className="me-[48px] cursor-pointer">Emergency Contacts</div>
+                <div className="me-[48px] cursor-pointer">{t('useful_websites')}</div>
+                <div className="me-[48px] cursor-pointer">{t('emergency_contacts')}</div>
               </div>
             </div>
           </div>
@@ -219,7 +218,7 @@ function Footer() {
         </div>
         <div className="mx-16 mt-6 md:flex md:justify-between">
           <div className="flex ">
-            <div className="me-2">Follow Us</div>
+            <div className="me-2">{t('foloow_us')}</div>
             <div className="rounded-full p-1 mx-1 border-[1px] border-white">
               <AiOutlineInstagram />
             </div>
@@ -236,8 +235,7 @@ function Footer() {
         </div>
         <div className="w-full text-sm text-center sm-text-[10px]">
           <div>
-            Copyright © 2023 Navi Mumbai Police | Developed By : Dreamcare
-            Developers
+          {t('copyright')} © 2023 {t('navi_mumbai_police')} | {t('developed_by')} : {t('dreamcare_developers')}
           </div>
         </div>
       </div>
