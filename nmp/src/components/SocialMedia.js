@@ -84,7 +84,7 @@ export default function SocialMedia() {
                 >
                   <div onMouseOver={stopScroll} onMouseOut={startScroll}>
                     <div className="mt-1 card">
-                      <div className="card-body news-card py-5 px-5 border-[1px]  ">
+                      <div className="box-shadow py-5 px-5 border-x-4 border-gray-800  ">
                         <a href="#" target="_blank" className="web-link2">
                           Hello Welcome to the Navi Mumbai Police Hello Welcome to the Navi Mumbai Police Hello Welcome to the Navi Mumbai Police Hello Welcome to the Navi Mumbai Police
                         </a>

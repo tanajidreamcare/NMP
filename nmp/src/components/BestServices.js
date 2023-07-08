@@ -11,8 +11,20 @@ import { TbUserSearch } from "react-icons/tb";
 import { BsCheck2Square, BsQuestionSquare } from "react-icons/bs";
 import { IoMdWallet } from "react-icons/io";
 import { BiMessageDetail } from "react-icons/bi";
+import { useState } from "react";
 
 export default function BestServices() {
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+
+  const handleMouseEnter = (index) => {
+    setHoveredItem(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
+
   const servicesName1 = [
     {
       index: 1,
@@ -101,10 +113,10 @@ export default function BestServices() {
             <div>
               {servicesName1.map((serviceName) => (
                 <div className="text-left md:justify-center" key={serviceName.index}>
-                  <div className="flex cursor-pointer justify-end">
-                    <div className="mt-1 my-14 md:mx-2 md:hidden md:my-0">
-                      <div className="flex justify-center w-16 h-16 bg-orange-500 rounded-full cursor-pointer hover:bg-sky-900">
-                        <div className="flex items-center text-white">
+                  <div  className={`flex  cursor-pointer justify-end`}>
+                  <div onMouseEnter={() => handleMouseEnter(serviceName.index)} onMouseLeave={handleMouseLeave} className={`mt-1 my-14 md:mx-2 md:hidden md:my-0 ${hoveredItem === serviceName.index ? "bg-sky-900" : "bg-[#E7581A] "}`}>
+                      <div  className="flex justify-center w-16 h-16 rounded-full cursor-pointer">
+                        <div className={`flex items-center text-white`}>
                           {serviceName.icon}
                         </div>
                       </div>
@@ -118,8 +130,8 @@ export default function BestServices() {
                       </div>
                     </div>
                     <div className="hidden mx-2 mt-1 md:block">
-                      <div className="flex justify-center md:w-16 md:h-16 w-[50px] h-[50px] bg-orange-500 rounded-full cursor-pointer hover:bg-sky-900">
-                        <div className="flex items-center text-white">
+                      <div  className={`flex justify-center md:w-16 md:h-16 w-[50px] h-[50px] ${hoveredItem === serviceName.index ? "bg-sky-900" : "bg-[#E7581A] "}  rounded-full cursor-pointer`}>
+                        <div className={`flex  items-center text-white`}>
                           {serviceName.icon}
                         </div>
                       </div>

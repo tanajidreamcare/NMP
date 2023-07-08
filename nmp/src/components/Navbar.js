@@ -2,14 +2,31 @@ import { BiSearch } from "react-icons/bi";
 import { useState } from "react";
 
 const Navbar = () => {
+  const [aboutUsToggle, setaboutUsToggle] = useState(false)
+  const [reportUsToggle, setreportUsToggle] = useState(false)
+  const [SpecialUnits1Toggle, setSpecialUnits1Toggle] = useState(false)
+  const [CitizenCornerToggle, setCitizenCornerToggle] = useState(false)
+  const [PoliceCornerToggle, setPoliceCornerToggle] = useState(false)
+  const [ContactUsToggle, setContactUsToggle] = useState(false)
   const [selectedOption, setSelectedOption] = useState("En");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
     setIsDropdownOpen(false);
   };
+
+  const aboutUs = ["Our mission", "Hall of Fame", "Responsibilities", "Hierarchy", "Organizational Structure", "Navi Mumbai Police Map", "History", "Initiatives", "Gallery", "Martyrs"]
+  const ReportUs = ["Online Complaint", "Tenant Information", "Lost/found", "Inform Us/Feedback"]
+  const SpecialUnits1 = ["Crime Branch", "Economic Offense Wing", "Traffic Branch", "Police Surgeon", "Motor Transport Unit", "Greater Mumbai Police Band"]
+  const SpecialUnits2 = ["Local Armed Police", "Quick Response team", "Riot Control Police", "Modemized Control Room", "Protection & Security", "Special Branch"]
+  const SpecialUnits3 = ["Cyber Crime", "Anti Narcotic Cell", "Crime against Women Unit", "Juvenile Aid Protection Unit(JAPU)", "Anti Human Trafficking Unit", "Crime Detection Unit"]
+  const CitizenCorner = ["Search & View Public FIR", "Filming/Shooting Application", "Police Clearance Service", "Loudspeaker Permission", "Accident Compensation", "Right to Information(RTI)", "Your Contribution", "Passport Status"]
+  const CitizenCorner2 = ["GRAS Payment", "Useful Websites", "Licensing Unit", "Citizen Wall", "Safety Tips", "DCP Visits", "Tenders", "FAQs"]
+  const PoliceCorner = ["Police Staff Council Meeting", "Police Foundation", "Welfare Activities", "Media Coverage", "Press Release", "Crime Review", "Miscellaneous", "Police Recruitment", "Good Work"]
+  const ContactUs = ["Police Station Incharge", "Divisional ACP's", "Senior Police Officers", "Emergency Contacts"]
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,10 +34,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex fixed z-10 items-center justify-between w-full px-2 bg-white md:flex-row">
+      <nav className="flex fixed z-20 items-center justify-between w-full px-2 bg-white md:flex-row">
         <div className="flex items-center">
           <img
-            src="/gal_img11.png"
+            src="/logo.png"
             alt="Logo"
             className="w-[50px] h-[50px] mr-2"
           />
@@ -29,33 +46,107 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <div className="flex items-center justify-end float-right mt-4 md:mt-0">
-          <div className="hidden md:flex justify-end">
-            <ul className="flex flex-col mt-3 text-[1em] space-y-2 md:flex-row md:space-y-0 md:space-x-4 text-sky-900">
+        <div className="flex items-center justify-around mt-4 md:mt-0">
+          <div className="hidden md:flex justify-around">
+            <ul className="flex flex-col mt-[2px] text-[1em] w-11/12 mr-5 space-y-2 md:flex-row md:space-y-0 md:space-x-4 text-sky-900">
               <li className="inline-flex font-medium leading-[28px] cursor-pointer">
                 Home
               </li>
-              <li className="inline font-medium leading-[28px] cursor-pointer">
+              <li onMouseEnter={() => setaboutUsToggle(true)} onMouseLeave={() => setaboutUsToggle(false)} className={`relative ${aboutUsToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 About Us
+                {aboutUsToggle &&
+                  <div className="absolute -left-5 z-50">
+                    <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
+                      {aboutUs.map((about, i) => (
+                        <li className="hover:text-[#E7581A] w-48" key={i}>{about}</li>
+                      ))}
+                    </ul>
+                  </div>
+                }
               </li>
-              <li className="font-medium leading-[28px] cursor-pointer">
+              <li onMouseEnter={() => setreportUsToggle(true)} onMouseLeave={() => setreportUsToggle(false)} className={`relative ${reportUsToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 Report Us
+                {reportUsToggle &&
+                  <div className="absolute -left-5 z-50">
+                    <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
+                      {ReportUs.map((report, i) => (
+                        <li className="hover:text-[#E7581A] w-48" key={i}>{report}</li>
+                      ))}
+                    </ul>
+                  </div>
+                }
               </li>
-              <li className="font-medium leading-[28px] cursor-pointer">
+              <li onMouseEnter={() => setSpecialUnits1Toggle(true)} onMouseLeave={() => setSpecialUnits1Toggle(false)} className={`relative ${SpecialUnits1Toggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 Special Units
+                {SpecialUnits1Toggle &&
+                  <div className="absolute -left-80 z-50">
+                    <ul className="text-sky-900 px-6 py-2 flex border-[1px] bg-white rounded-lg">
+                      <div>
+                        {SpecialUnits1.map((special, i) => (
+                          <li className="w-60 hover:text-[#E7581A]" key={i}>{special}</li>
+                        ))}
+                      </div>
+                      <div>
+                        {SpecialUnits2.map((special, i) => (
+                          <li className="w-60 hover:text-[#E7581A]" key={i}>{special}</li>
+                        ))}
+                      </div>
+                      <div>
+                        {SpecialUnits3.map((special, i) => (
+                          <li className="w-72 hover:text-[#E7581A]" key={i}>{special}</li>
+                        ))}
+                      </div>
+
+                    </ul>
+                  </div>
+                }
               </li>
-              <li className="font-medium leading-[28px] cursor-pointer">
+              <li onMouseEnter={() => setCitizenCornerToggle(true)} onMouseLeave={() => setCitizenCornerToggle(false)} className={`relative ${CitizenCornerToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 Citizen Corner
+                {CitizenCornerToggle &&
+                  <div className="absolute -left-36 z-50">
+                    <ul className="text-sky-900 px-6 py-2 flex border-[1px] bg-white rounded-lg">
+                      <div>
+                        {CitizenCorner.map((special, i) => (
+                          <li className="w-60 hover:text-[#E7581A]" key={i}>{special}</li>
+                        ))}
+                      </div>
+                      <div>
+                        {CitizenCorner2.map((special, i) => (
+                          <li className="w-32 hover:text-[#E7581A]" key={i}>{special}</li>
+                        ))}
+                      </div>
+                    </ul>
+                  </div>
+                }
               </li>
-              <li className="font-medium leading-[28px] cursor-pointer">
+              <li onMouseEnter={() => setPoliceCornerToggle(true)} onMouseLeave={() => setPoliceCornerToggle(false)} className={`relative ${PoliceCornerToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 Police Corner
+                {PoliceCornerToggle &&
+                  <div className="absolute -left-5 z-50">
+                    <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
+                      {PoliceCorner.map((report, i) => (
+                        <li className="hover:text-[#E7581A] w-56" key={i}>{report}</li>
+                      ))}
+                    </ul>
+                  </div>
+                }
               </li>
-              <li className="font-medium leading-[28px] cursor-pointer">
+              <li onMouseEnter={() => setContactUsToggle(true)} onMouseLeave={() => setContactUsToggle(false)} className={`relative ${ContactUsToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
                 Contact Us
+                {ContactUsToggle &&
+                  <div className="absolute -left-10 z-50">
+                    <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
+                      {ContactUs.map((report, i) => (
+                        <li className="hover:text-[#E7581A] w-44" key={i}>{report}</li>
+                      ))}
+                    </ul>
+                  </div>
+                }
               </li>
             </ul>
-            <div className="flex items-center mx-2 border-l-[2px] border-r-[2px] text-[#E7581A]">
-              <div className="w-[36px] h-[36px] flex items-center justify-center m-2 font-normal border-2 rounded-md cursor-pointer">
+            <div className="flex items-center mx-2 w-1/12  text-[#E7581A]">
+              {/* <div className="w-[36px] h-[36px] flex items-center justify-center m-2 font-normal border-2 rounded-md cursor-pointer">
                 A+
               </div>
               <div className="w-[36px] h-[36px] flex items-center justify-center m-2 font-normal border-2 rounded-md cursor-pointer">
@@ -63,7 +154,7 @@ const Navbar = () => {
               </div>
               <div className="w-[36px] h-[36px] flex items-center justify-center m-2 font-normal border-2 rounded-md cursor-pointer">
                 A-
-              </div>
+              </div> */}
               <div className="relative flex">
                 <button
                   className="flex items-center space-x-1 cursor-pointer focus:outline-none"
@@ -105,13 +196,13 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
-              <div className="border-l-[2px]">
+              <div className="">
                 <BiSearch size={32} className="text-sky-900" />
               </div>
             </div>
           </div>
           <div className="relative flex md:hidden text-[#E7581A]">
-            <div className="w-[36px] h-[36px] flex items-center justify-center m-2 font-normal border-[1px] rounded-md cursor-pointer">
+            {/* <div className="w-[36px] h-[36px] flex items-center justify-center m-2 font-normal border-[1px] rounded-md cursor-pointer">
               A+
             </div>
             <div className="w-[36px] h-[36px] flex items-center justify-center m-2 font-normal border-[1px] rounded-md cursor-pointer">
@@ -119,7 +210,7 @@ const Navbar = () => {
             </div>
             <div className="w-[36px] h-[36px] flex items-center justify-center m-2 font-normal border-[1px] rounded-md cursor-pointer">
               A-
-            </div>
+            </div> */}
             <button
               className="flex items-center space-x-1 cursor-pointer focus:outline-none"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
