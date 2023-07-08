@@ -79,7 +79,7 @@ export default function SocialMedia() {
                   direction="up"
                   height="300px"
                   width="300px"
-                  scrollamount="5"
+                  scrollamount="3"
                   id="scroll_news"
                 >
                   <div onMouseOver={stopScroll} onMouseOut={startScroll}>

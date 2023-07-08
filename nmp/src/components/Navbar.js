@@ -194,8 +194,8 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <div className="">
-              <BiSearch size={32} className="text-sky-900" />
+            <div className="w-16">
+              {/* <BiSearch size={32} className="text-sky-900" /> */}
             </div>
           </div>
         </div>

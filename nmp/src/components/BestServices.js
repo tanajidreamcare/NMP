@@ -104,7 +104,7 @@ export default function BestServices() {
   ];
   return (
     <>
-      <div className="text-center md:mb-10 bg-green-50">
+      <div className="text-center  bg-green-50">
         <div className="mb-10 pt-10 md:text-3xl font-extrabold leading-9 text-[24px] text-[#15233E]">
           Our Best Services
         </div>

@@ -5,7 +5,7 @@ export default function CPMessage() {
 
   return (
     <>
-      <div className="py-5 md:py-24 bg-sky-950">
+      <div className="py-5 md:py-12 bg-sky-950">
         <div className="justify-center w-full h-full md:flex">
           <div className="flex items-center justify-center">
             <div className="text-[24px] font-extrabold leading-9 text-white md:hidden">Meet The Chief</div>

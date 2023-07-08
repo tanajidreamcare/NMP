@@ -2,20 +2,22 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi"
+import { FaWindowClose } from "react-icons/fa"
 
 const images = [
-  { path: "/gallery/farariPathak_img.jpg", prop: "w-[32.91%] h-[53.88%] top-0 left-0", title: "" },
-  { path: "/gallery/foundMissingPerson_img.jpg", prop: "w-[28.66%] h-[60.36%] top-0 left-[37%]", title: "" },
-  { path: "/gallery/maharashtraDay.jpg", prop: "w-[30.57%] h-[41.56%] top-0 right-0", title: "" },
-  { path: "/gallery/missingbag.jpg", prop: "w-[32.91%] h-[42.08%] bottom-0 left-0", title: "" },
-  { path: "/gallery/retirement_img.jpg", prop: "w-[28.66%] h-[34.44%] bottom-0 left-[37%]", title: "" },
-  { path: "/gallery/wareHelmet.jpg", prop: "w-[30.57%] h-[53.88%] bottom-0 right-0", title: "" },
-  { path: "/gallery/workersDay.jpg", prop: "w-[32.91%] h-[53.88%] top-0 left-0", title: "" },
-  { path: "/gallery/yoga_img.jpg", prop: "w-[28.66%] h-[60.36%] top-0 left-[37%]", title: "" },
-  { path: "/gal_img9.png", prop: "w-[30.57%] h-[41.56%] top-0 right-0", title: "" },
-  { path: "/gal_img10.png", prop: "w-[32.91%] h-[42.08%] bottom-0 left-0", title: "" },
-  { path: "/gal_img11.png", prop: "w-[28.66%] h-[34.44%] bottom-0 left-[37%]", title: "" },
-  { path: "/gal_img12.png", prop: "w-[30.57%] h-[53.88%] bottom-0 right-0", title: "" },
+  { path: "/gallery/farariPathak_img.jpg", prop: "w-[32.91%] h-[53.88%] top-0 left-0", title: "दि. ०९/०५/२०२३ पासून मा. पोलीस आयुक्त सो. व पोलीस सहआयुक्त  यांनी पाहिजे व फरारी आरोपीचे पथक स्थापन केले होते. सदर पथकाने नवी मुंबई पोलीस आयुक्तालयातील पाहिजे २९ व फरारी १० असे एकूण ३९ आरोपी यांचा शोध लावला." },
+  { path: "/gallery/foundMissingPerson_img.jpg", prop: "w-[28.66%] h-[60.36%] top-0 left-[37%]", title: "मनुष्य मिसिंग नामे मार्गेश तानाजी शिंदे वय 43 वर्षे याबाबत वाशी पोलीस ठाण्यामध्ये सन 2014 मध्ये तक्रार दाखल झालेली होती. तपास तांत्रिक पद्धतीने सोशल मीडियावरून सातत्याने करून पोलिसांच्या अथक प्रयत्नांना 9 वर्षांनी सदर इसमास शोधून काढण्यास नवी मुंबई पोलिसांना यश मिळाले." },
+  { path: "/gallery/maharashtraDay.jpg", prop: "w-[30.57%] h-[41.56%] top-0 right-0", title: "महाराष्ट्रदिन निमित्त पोलीस मुख्यालय कळंबोली, नवी मुंबई येथे ध्वजारोहण करण्यात आले. यावेळी पोलीस खात्यात धुरंदर कामगिरी बजावणाऱ्या सन्मानमूर्तींना  सन्मान देऊन त्यांचा सत्कार करण्यात आला." },
+  { path: "/gallery/missingbag.jpg", prop: "w-[32.91%] h-[42.08%] bottom-0 left-0", title: "अवघ्या दोन तासात गहाळ झालेली बॅग शोधून काढून सुरेखा यांना सुपूर्द केली. दोन तासांपूर्वी तणावात असणा-या सुरेखा यांच्या चेह-यावर हास्याची लकेर उमटली" },
+  { path: "/gallery/retirement_img.jpg", prop: "w-[28.66%] h-[34.44%] bottom-0 left-[37%]", title: "नवी मुंबई पोलीस आयुक्तालय येथे ३७ पोलीस अधिकारी व अंमलदार यांचा सेवानिवृत्ती सोहळा पार पडला. माननीय पोलीस आयुक्त सो. यांच्या हस्ते तुळशीचे रोप देऊन पुढील वाटचाल सुख-समृद्धी व आरोग्यदायी व्हावी यासाठी शुभेच्छा देण्यात आल्या" },
+  { path: "/gallery/wareHelmet.jpg", prop: "w-[30.57%] h-[53.88%] bottom-0 right-0", title: "आपणही आपल्या कुटुंबाचे आयर्नमॅन आहात.  त्यामुळे दुचाकीवर हेल्मेट वापरा, संकट काळात सुरक्षित राहा." },
+  { path: "/gallery/workersDay.jpg", prop: "w-[32.91%] h-[53.88%] top-0 left-0", title: "कामगार दिनाच्या सर्व कामगार बंधु- भगिनी यांना हार्दिक शुभेच्छा..!" },
+  { path: "/gallery/yoga_img.jpg", prop: "w-[28.66%] h-[60.36%] top-0 left-[37%]", title: "नवी मुंबई पोलीस मुख्यालय कळंबोली येथे आंतरराष्ट्रीय 'योग दिन' निमित्ताने पोलीस उपायुक्त मुख्यालय यांच्या उपस्थितीत आंतरराष्ट्रीय योग दिवस साजरा करण्यात आला.   " },
+  { path: "/gallery/arrestedMurder.jpg", prop: "w-[30.57%] h-[41.56%] top-0 right-0", title: "नेरूळ मध्ये बिल्डरची हत्या करणा-या ४ आरोपींना बिहार मधून तात्काळ अटक." },
+  { path: "/gallery/ChhShivajiMaharaj.jpg", prop: "w-[32.91%] h-[42.08%] bottom-0 left-0", title: "छत्रपती शिवाजी महाराज यांच्या जयंतीनिमित्त विनम्र अभिवादन! #Shivjayanti2023#शिवजयंती" },
+  { path: "/gallery/inaugurationCeremony.jpg", prop: "w-[28.66%] h-[34.44%] bottom-0 left-[37%]", title: "महिला पोलीस अंमलदारांना उद्घाटनाचा मान कोपरखैरणे इथल्या वाहतूक कार्यालयाच्या नुतनीकरणाच्या उद्घाटनाचा मान " },
+  { path: "/gallery/shrutiUPSC.jpg", prop: "w-[30.57%] h-[53.88%] bottom-0 right-0", title: "नवी मुंबई पोलीस दलातील वरिष्ठ पोलीस निरीक्षक सुभाष कोकाटे  यांची  कन्या श्रुती सुभाष कोकाटे यांनी केंद्रीय लोकसेवा आयोग (UPSC) परीक्षेत यश संपादन केल्याबद्दल  मा. पोलीस  आयुक्त श्री मिलिंद भारबे  सो.  यांनी त्यांचा सत्कार करून पुढील वाटचालीस शुभेच्छा दिल्या." },
   // {path: "/gal_img1.png"},
   // {path: "/gal_img2.png"},
   // {path:"/gal_img3.png"},
@@ -67,7 +69,7 @@ const Gallery = () => {
           <div className="mt-5 w-full h-[70%] flex justify-center">
             <div className="relative w-[70%] h-[95%] rounded-lg flex items-center justify-center">
               {displayedImages.map((src, index) => (
-                <><div key={src} className={`absolute ${src.prop} `}>
+                <div onClick={() => handleImageClick(index + startIndex)} key={src} className={`absolute ${src.prop} `}>
                   <Image
                     src={src.path}
                     alt={`Image ${index + 1}`}
@@ -75,39 +77,41 @@ const Gallery = () => {
                     height="200"
                     width="200"
                     className="object-cover w-full h-full rounded-lg"
-                    onClick={() => handleImageClick(index + startIndex)} />
-                </div><div className="top-0 left-0 flex items-center justify-center w-full h-full transition-all duration-500 bg-black md:absolute bg-opacity-95 md:opacity-0 hover:opacity-100">
-                    <div className="z-20 transform -translate-x-1/2 -translate-y-1/2 md:absolute top-1/2 left-1/2">
-                      <div className="px-1 text-center text-white ">
-                        {displayedImages.title}
+                     />
+                    <div className="hidden top-0 left-0 md:flex items-center justify-center w-full h-full transition-all duration-500 rounded-lg bg-black md:absolute bg-opacity-95 md:opacity-0 hover:opacity-100">
+                    <div className="z-20 transform  ">
+                      <div className="px-1 flex justify-center items-center text-center text-white ">
+                        {src.title}
                       </div>
                     </div>
-                  </div></>
+                  </div>
+                </div>
+                
               ))}
               {selectedImage !== null && (
-                <div className="fixed inset-0 z-10 flex items-center justify-center">
-                  <div className="absolute inset-0 w-full bg-gray-900 opacity-75"></div>
-                  <div className="relative w-[70%]">
+                <div className="fixed inset-0 z-50 flex items-center justify-center">
+                  <div className="absolute inset-0 w-full h-full bottom-20 bg-gray-900 bg-opacity-75"></div>
+                  <div className="relative flex justify-center items-center w-[60%] h-[90%]">
                     <img
                       src={images[selectedImage].path}
                       alt={`Image ${selectedImage + 1}`}
                       layout="responsive"
-                      className="h-[50%] w-full max-w-[70%]"
+                      className="h-[35%] md:h-[80%]  w-[90%]"
 
                     />
                     <button
-                      className="absolute top-0 bottom-0 left-0 w-1/2 bg-transparent"
+                      className="absolute h-[50%] text-white top-1/4 bottom-0 -left-10 w-0"
                       onClick={handlePrevClick1}
-                    ></button>
+                    ><BiSolidLeftArrow size={50}/></button>
                     <button
-                      className="absolute top-0 bottom-0 right-0 w-1/2 bg-transparent"
+                      className="absolute h-[50%] top-1/4 bottom-0 text-white right-0 w-0 "
                       onClick={handleNextClick1}
-                    ></button>
+                    ><BiSolidRightArrow size={50}/></button>
                     <button
-                      className="absolute top-0 right-0 p-2 mt-4 mr-4 text-white bg-gray-800 border border-white rounded-full"
+                      className="absolute top-20 md:top-0 right-0 p-2 mt-4 mr-4 text-white "
                       onClick={() => setSelectedImage(null)}
                     >
-                      <span className="font-bold">X</span>
+                      <FaWindowClose size={50}/>
                     </button>
                   </div>
                 </div>
@@ -115,7 +119,7 @@ const Gallery = () => {
             </div>
 
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center z-50">
             <button
               className="px-4 py-2 text-white  bg-slate-400 w-[65px] h-[56px]"
               onClick={handlePrevClick}

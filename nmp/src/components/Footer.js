@@ -15,8 +15,8 @@ function Footer() {
     { image5: "/startupIndia_img.png" },
   ];
   return (
-    <div>
-      <div className="">
+    <div className="-mt-28 ">
+      <div className="mt-0">
         <div className="w-full">
         <img className="w-full "  src={'/footerBanner.png'} />
         </div>
