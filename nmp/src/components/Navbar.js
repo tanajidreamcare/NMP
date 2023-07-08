@@ -12,6 +12,16 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const [aboutUsMobile, setaboutUsMobile] = useState(false)
+  const [reportUsMobile, setreportUsMobile] = useState(false)
+  const [SpecialUnits1Mobile, setSpecialUnits1Mobile] = useState(false)
+  const [CitizenCornerMobile, setCitizenCornerMobile] = useState(false)
+  const [PoliceCornerMobile, setPoliceCornerMobile] = useState(false)
+  const [ContactUsMobile, setContactUsMobile] = useState(false)
+  // const [selectedOption, setSelectedOption] = useState("En");
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
@@ -33,7 +43,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed z-20 -mt-10 flex items-center w-full justify-between  px-2 bg-white">
+    <nav className="fixed z-20 flex items-center justify-between w-full px-2 -mt-10 bg-white">
       <div className="flex items-center">
         <img
           src="/logo.png"
@@ -45,7 +55,7 @@ const Navbar = () => {
         </h1>
       </div>
 
-      <div className="flex items-center justify-around  md:mt-0">
+      <div className="flex items-center justify-around md:mt-0">
         <div className="justify-around hidden md:flex">
           <ul className="flex flex-col mt-[2px] text-[1em] w-11/12 mr-5 space-y-2 md:flex-row md:space-y-0 md:space-x-4 text-sky-900">
             <li className="inline-flex font-medium leading-[28px] cursor-pointer">
@@ -295,12 +305,12 @@ const Navbar = () => {
                 <li className="px-4 py-2 cursor-pointer hover:bg-white">
                   Home
                 </li>
-                <li onClick={() => setaboutUsToggle(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
+                <li onClick={() => setaboutUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
                   About Us
-                  {aboutUsToggle &&
-                    <div className="absolute z-50 left-[20%]">
-                      <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
-                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setaboutUsToggle(false)}>X</div>
+                  {aboutUsMobile &&
+                    <div className="absolute z-50 left-[20%] mt-2">
+                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
+                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setaboutUsMobile(false)}>X</div>
                         {aboutUs.map((about, i) => (
                           <><li className="hover:text-[#E7581A] w-48" key={i}>{about}</li></>
                         ))}
@@ -308,20 +318,83 @@ const Navbar = () => {
                     </div>
                   }
                 </li>
-                <li className="px-4 py-2 cursor-pointer hover:bg-white">
+                <li onClick={() => setreportUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
                   Report Us
+                  {reportUsMobile &&
+                    <div className="absolute z-50 left-[20%] mt-2">
+                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
+                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setreportUsMobile(false)}>X</div>
+                        {ReportUs.map((about, i) => (
+                          <><li className="hover:text-[#E7581A] w-48" key={i}>{about}</li></>
+                        ))}
+                      </ul>
+                    </div>
+                  }
                 </li>
-                <li className="px-4 py-2 cursor-pointer hover:bg-white">
+                <li onClick={() => setreportUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
                   Special Units
+                  {reportUsMobile &&
+                    <div className="absolute z-50 left-[20%] mt-2">
+                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
+                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setreportUsMobile(false)}>X</div>
+                        
+                      {SpecialUnits1.map((special, i) => (
+                        <li className="hover:text-[#E7581A] w-48" key={i}>{special}</li>
+                      ))}
+                    
+                      {SpecialUnits2.map((special, i) => (
+                        <li className="hover:text-[#E7581A] w-48" key={i}>{special}</li>
+                      ))}
+                    
+                      {SpecialUnits3.map((special, i) => (
+                        <li className="hover:text-[#E7581A] w-48" key={i}>{special}</li>
+                      ))}
+                      
+                      </ul>
+                    </div>
+                  }
                 </li>
-                <li className="px-4 py-2 cursor-pointer hover:bg-white">
+                <li onClick={() => setaboutUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
                   Citizen Corner
+                  {aboutUsMobile &&
+                    <div className="absolute z-50 left-[20%] mt-2">
+                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
+                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setaboutUsMobile(false)}>X</div>
+                      {CitizenCorner.map((special, i) => (
+                        <li className="hover:text-[#E7581A] w-48" key={i}>{special}</li>
+                      ))}
+                      {CitizenCorner2.map((special, i) => (
+                        <li className="hover:text-[#E7581A] w-48" key={i}>{special}</li>
+                      ))}
+                      </ul>
+                    </div>
+                  }
                 </li>
-                <li className="px-4 py-2 cursor-pointer hover:bg-white">
+                <li onClick={() => setaboutUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
                   Police Corner
+                  {aboutUsMobile &&
+                    <div className="absolute z-50 left-[20%] mt-2">
+                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
+                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setaboutUsMobile(false)}>X</div>
+                      {PoliceCorner.map((report, i) => (
+                      <li className="hover:text-[#E7581A] w-48" key={i}>{report}</li>
+                    ))}
+                      </ul>
+                    </div>
+                  }
                 </li>
-                <li className="px-4 py-2 cursor-pointer hover:bg-white">
+                <li onClick={() => setaboutUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
                   Contact Us
+                  {aboutUsMobile &&
+                    <div className="absolute z-50 left-[20%] mt-2">
+                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
+                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setaboutUsMobile(false)}>X</div>
+                      {ContactUs.map((report, i) => (
+                      <li className="hover:text-[#E7581A] w-48" key={i}>{report}</li>
+                    ))}
+                      </ul>
+                    </div>
+                  }
                 </li>
               </ul>
             </div>
