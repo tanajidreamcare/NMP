@@ -20,10 +20,10 @@ const Carousel = () => {
 
 
   return (
-    <div className="flex relative flex-col items-center w-full justify-center  overflow-hidden ">
+    <div className="relative w-full-mt-10 p-0 ">
 
 
-      <div className="container relative h-full w-full border-b-2 mt-10 border-black">
+      <div className="h-full w-full mt-10">
 
         <iframe className="rep" width="560" height="315" src="https://www.youtube-nocookie.com/embed/EoYWwSalaJ4?autoplay=1&loop=1&playlist=EoYWwSalaJ4&mute=1&controls=0&rel=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         {/* <BackgroundVideo /> */}
