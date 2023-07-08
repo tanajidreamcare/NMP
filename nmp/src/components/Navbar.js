@@ -2,6 +2,7 @@ import { BiSearch } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import i18n from "i18next";
 import { useTranslation} from "react-i18next";
+import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
 
 const Navbar = () => {
   const [aboutUsToggle, setaboutUsToggle] = useState(false)
@@ -137,7 +138,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed z-20 flex items-center justify-between w-full px-2 -mt-10 bg-white">
+    <nav className="fixed z-30 flex items-center justify-between w-full px-2 -mt-10 bg-white">
       <div className="flex items-center">
         <img
           src="/logo.png"
@@ -159,7 +160,7 @@ const Navbar = () => {
             {t('about_us')}
               {aboutUsToggle &&
                 <div className="absolute z-50 -left-5">
-                  <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
+                  <ul className="text-black bg-white px-6 py-2 border-[1px]  rounded-lg">
                     {aboutUs.map((about, i) => (
                       <li className="hover:text-[#E7581A] w-48" key={i}>{about.title}</li>
                     ))}
@@ -171,7 +172,7 @@ const Navbar = () => {
               {t('report_us')}
               {reportUsToggle &&
                 <div className="absolute z-50 -left-5">
-                  <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
+                  <ul className="text-black bg-white px-6 py-2 border-[1px]  rounded-lg">
                     {ReportUs.map((report, i) => (
                       <li className="hover:text-[#E7581A] w-48" key={i}>{report.title}</li>
                     ))}
@@ -183,7 +184,7 @@ const Navbar = () => {
               {t('special_units')}
               {SpecialUnits1Toggle &&
                 <div className="absolute z-50 -left-80">
-                  <ul className="text-sky-900 px-6 py-2 flex border-[1px] bg-white rounded-lg">
+                  <ul className="text-black bg-white px-6 py-2 flex border-[1px]  rounded-lg">
                     <div>
                       {SpecialUnits1.map((special, i) => (
                         <li className="w-60 hover:text-[#E7581A]" key={i}>{special.title}</li>
@@ -208,7 +209,7 @@ const Navbar = () => {
               {t('citizen_corner')}
               {CitizenCornerToggle &&
                 <div className="absolute z-50 -left-36">
-                  <ul className="text-sky-900 px-6 py-2 flex border-[1px] bg-white rounded-lg">
+                  <ul className="text-black bg-white px-6 py-2 flex border-[1px]  rounded-lg">
                     <div>
                       {CitizenCorner.map((special, i) => (
                         <li className="w-60 hover:text-[#E7581A]" key={i}>{special.title}</li>
@@ -227,7 +228,7 @@ const Navbar = () => {
               {t('police_corner')}
               {PoliceCornerToggle &&
                 <div className="absolute z-50 -left-5">
-                  <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
+                  <ul className="text-black bg-white px-6 py-2 border-[1px]  rounded-lg">
                     {PoliceCorner.map((report, i) => (
                       <li className="hover:text-[#E7581A] w-56" key={i}>{report.title}</li>
                     ))}
@@ -238,7 +239,7 @@ const Navbar = () => {
               {t('contact_us')}
               {ContactUsToggle &&
                 <div className="absolute z-50 -left-28">
-                  <ul className="text-sky-900 px-6 py-2 border-[1px] bg-white rounded-lg">
+                  <ul className="text-black bg-white px-6 py-2 border-[1px]  rounded-lg">
                     {ContactUs.map((report, i) => (
                       <li className="hover:text-[#E7581A] w-44" key={i}>{report.title}</li>
                     ))}
@@ -354,7 +355,7 @@ const Navbar = () => {
         </div>
 
         {/* for smaller devices */}
-        <div className="md:hidden">
+        <div className="md:hidden ">
           <button
             className="flex items-center justify-center"
             onClick={handleMenuToggle}
@@ -362,7 +363,7 @@ const Navbar = () => {
             {isMenuOpen ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10 text-[#E7581A]"
+                className="h-10 w-10 z-40 absolute top-20 right-10 text-[#E7581A]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -393,97 +394,91 @@ const Navbar = () => {
           </button>
 
           {isMenuOpen && (
-            <div className="absolute top-[40] left-0 right-0 bg-white border-b border-gray-200">
-              <ul className="text-center text-sky-900">
-                <li className="px-4 py-2 cursor-pointer hover:bg-white">
+            <div className="absolute top-12 w-full h-screen right-0  overflow-scroll  border-b border-gray-200">
+              <ul className="text-left px-6 pb-6 items-center ml-28 pt-20 overflow-auto bg-white  text-black text-lg">
+                <li className="px-8 py-4 cursor-pointer h-full hover:bg-white">
                   {t('home')}
                 </li>
-                <li onClick={() => setaboutUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
-                  {t('about_us')}
+                <li onClick={() => setaboutUsMobile(!aboutUsMobile)} className="px-8 py-4">
+                 <div  className="flex"> <span className="pr-12">{t('about_us')}</span> {aboutUsMobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
                   {aboutUsMobile &&
-                    <div className="absolute z-50 left-[20%] mt-2">
-                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
-                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setaboutUsMobile(false)}>X</div>
+                    <div className=" h-full w-full ml-6 text-sm  mt-2">
+                      <ul className="  rounded-lg ">
                         {aboutUs.map((about, i) => (
-                          <><li className="hover:text-[#E7581A] w-48" key={i}>{about.title}</li></>
+                          <><li className="py-2 " key={i}>{about.title}</li></>
                         ))}
                       </ul>
                     </div>
                   }
                 </li>
-                <li onClick={() => setreportUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
-                  {t('report_us')}
+                <li onClick={() => setreportUsMobile(!reportUsMobile)} className="px-8 py-4">
+                 <div  className="flex"> <span className="pr-10">{t('report_us')}</span> {reportUsMobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
                   {reportUsMobile &&
-                    <div className="absolute z-50 left-[20%] mt-2">
-                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
-                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setreportUsMobile(false)}>X</div>
+                    <div className="h-full w-full ml-6 text-sm  mt-2">
+                      <ul className="  rounded-lg ">
                         {ReportUs.map((about, i) => (
-                          <><li className="hover:text-[#E7581A] w-48" key={i}>{about.title}</li></>
+                          <><li className="py-2 " key={i}>{about.title}</li></>
                         ))}
                       </ul>
                     </div>
                   }
                 </li>
-                <li onClick={() => setreportUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
-                  {t('special_units')}
-                  {reportUsMobile &&
-                    <div className="absolute z-50 left-[20%] mt-2">
-                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
-                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setreportUsMobile(false)}>X</div>
-                        
+                
+                <li onClick={() => setSpecialUnits1Mobile(!SpecialUnits1Mobile)} className="px-8 py-4">
+                <div  className="flex"> <span className="pr-4">{t('special_units')}</span> {SpecialUnits1Mobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
+                  {SpecialUnits1Mobile &&
+                    <div className="h-full w-full ml-6 text-sm  mt-2">
+                      <ul className=" rounded-lg ">                        
                       {SpecialUnits1.map((special, i) => (
-                        <li className="hover:text-[#E7581A] w-48" key={i}>{special.title}</li>
+                        <li className="py-2" key={i}>{special.title}</li>
                       ))}
                     
                       {SpecialUnits2.map((special, i) => (
-                        <li className="hover:text-[#E7581A] w-48" key={i}>{special.title}</li>
+                        <li className="py-2" key={i}>{special.title}</li>
                       ))}
                     
                       {SpecialUnits3.map((special, i) => (
-                        <li className="hover:text-[#E7581A] w-48" key={i}>{special.title}</li>
+                        <li className="py-2" key={i}>{special.title}</li>
                       ))}
                       
                       </ul>
                     </div>
                   }
                 </li>
-                <li onClick={() => setaboutUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
-                  {t('citizen_corner')}
-                  {aboutUsMobile &&
-                    <div className="absolute z-50 left-[20%] mt-2">
-                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
-                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setaboutUsMobile(false)}>X</div>
+                <li onClick={() => setCitizenCornerMobile(!CitizenCornerMobile)} className="px-8 py-4  ">
+                <div  className="flex"> <span className="pr-1">{t('citizen_corner')}</span> {CitizenCornerMobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
+                  {CitizenCornerMobile &&
+                    <div className="h-full w-full ml-6 text-sm  mt-2">
+                      <ul className=" rounded-lg ">
                       {CitizenCorner.map((special, i) => (
-                        <li className="hover:text-[#E7581A] w-48" key={i}>{special.title}</li>
+                        <li className="py-2" key={i}>{special.title}</li>
                       ))}
                       {CitizenCorner2.map((special, i) => (
-                        <li className="hover:text-[#E7581A] w-48" key={i}>{special.title}</li>
+                        <li className="py-2" key={i}>{special.title}</li>
                       ))}
                       </ul>
                     </div>
                   }
                 </li>
-                <li onClick={() => setaboutUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
-                  {t('police_corner')}
-                  {aboutUsMobile &&
-                    <div className="absolute z-50 left-[20%] mt-2">
-                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
-                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setaboutUsMobile(false)}>X</div>
+                <li onClick={() => setPoliceCornerMobile(!PoliceCornerMobile)} className="px-8 py-4">
+                <div  className="flex"> <span className="pr-3">{t('police_corner')}</span> {PoliceCornerMobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
+                  {PoliceCornerMobile &&
+                    <div className="h-full w-full ml-6 text-sm  mt-2">
+                    <ul className="rounded-lg ">
                       {PoliceCorner.map((report, i) => (
-                      <li className="hover:text-[#E7581A] w-48" key={i}>{report.title}</li>
+                      <li className="py-2" key={i}>{report.title}</li>
                     ))}
                       </ul>
                     </div>
                   }
                 </li>
-                <li onClick={() => setaboutUsMobile(true)} className="px-4 py-2 cursor-pointer hover:bg-white">
-                  {t('contact_us')}
-                  {aboutUsMobile &&
-                    <div className="absolute z-50 left-[20%] mt-2">
-                      <ul className="text-sky-900 px-6 py-2border-[1px] bg-white rounded-lg bg-zinc-50">
-                      <div className="absolute right-5 text-[#E7581A] font-extrabold" onClick={() => setaboutUsMobile(false)}>X</div>
+                <li onClick={() => setContactUsMobile(!ContactUsMobile)} className="px-8 py-4 mb-3">
+                <div  className="flex"> <span className="pr-8">{t('contact_us')}</span> {ContactUsMobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
+                  {ContactUsMobile &&
+                    <div className="h-full w-full ml-6 text-sm  mt-2">
+                    <ul className=" rounded-lg ">
                       {ContactUs.map((report, i) => (
-                      <li className="hover:text-[#E7581A] w-48" key={i}>{report.title}</li>
+                      <li className="py-2" key={i}>{report.title}</li>
                     ))}
                       </ul>
                     </div>

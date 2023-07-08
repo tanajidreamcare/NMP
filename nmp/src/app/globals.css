@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.rep {
+/* .rep {
   position: absolute;
   top: 0;
   left: 0px;
@@ -10,6 +10,22 @@
   height: 120%;
   object-fit: cover;
   z-index: -1;
+} */
+
+.rep {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .rep {
+    height: 100vh;
+  }
 }
 
 .box-shadow{

@@ -24,33 +24,33 @@ const Carousel = () => {
 
 
   return (
-    <div className="relative p-0 w-full-mt-10 ">
+    <div className="relative w-full  p-0 ">
 
 
-      <div className="w-full h-full mt-10">
+      <div className="relative md:block pb-[50%] md:pb-0 w-full mt-10" >
 
-        <iframe className="rep" width="560" height="315" src="https://www.youtube-nocookie.com/embed/EoYWwSalaJ4?autoplay=1&loop=1&playlist=EoYWwSalaJ4&mute=1&controls=0&rel=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        {/* <BackgroundVideo /> */}
+        <iframe className="hidden md:block rep " width="560" height="315" src="https://www.youtube-nocookie.com/embed/EoYWwSalaJ4?autoplay=1&loop=1&playlist=EoYWwSalaJ4&mute=1&controls=0&rel=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe className="md:hidden rep " width="560" height="315" src="https://www.youtube.com/embed/ixomwj9LP2s?autoplay=1&mute=1&loop=1&playlist=ixomwj9LP2s" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-        <div className="z-10 bg-[#15233EAD] bg-opacity-[68%] w-[7%] opacity- h-screen ">
+        <div className="z-10 md:bg-opacity-[68%] md:w-[7%] w-[25%] opacity- h-screen ">
           <div className="flex">
             <Image
               src="/call_img.png"
               alt="hb"
               width={60}
               height={60}
-              className="absolute w-16 h-16 cursor-pointer right-16 top-16"
+              className="absolute w-16 h-16 cursor-pointer bottom-[45%] right-[5%] md:right-16 md:top-16"
             />
           </div>
-          <div className="flex justify-center">
-            <div className="z-10 flex items-center justify-center py-6 bg-transparent">
-              <ul className="z-30 space-y-2 ">
-                <li className="text-white border-b-4 cursor-pointer ">
+          <div className="flex bg-[#15233EAD] md:h-full  justify-center ">
+            <div className="z-10 flex  justify-center py-6 bg-transparent">
+              <ul className="space-y-2 z-20 mt-8">
+                <li className="border-b-4 cursor-pointer text-white  ">
                   <div className="flex justify-center">
                     <Image
                       src="/emergency_img.png"
                       alt="Emergency Help"
-                      className="hover:filter w-[36px] h-[30px] hover:brightness-75"
+                      className="hover:filter w-[36px] h-[30px] mt-2 hover:brightness-75"
                       width={95}
                       height={70}
                     />
@@ -104,7 +104,7 @@ const Carousel = () => {
                   </h1>
                 </li>
 
-                <li className="text-white border-b-4 cursor-pointer ">
+                <li className=" cursor-pointer text-white ">
                   <div className="flex justify-center">
                     <Image
                       src="/citizen_img.png"
@@ -124,7 +124,7 @@ const Carousel = () => {
           {/* <div>Headline</div> */}
         </div>
 
-        <div className="absolute top-[60%] left-[42%] w-[25%] bg-white border-[1px] border-[#E7581A] rounded-2xl py-2 px-4 z-20">
+        <div className="absolute top-[2%] md:top-[55%] left-[25%] md:left-[40%] w-[60%] md:w-[25%] bg-white border-[1px] border-[#E7581A] rounded-2xl py-2 px-4 z-20">
           <button onClick={toggleDropdown} className="dropdown-toggle text-[#E7581A] flex justify-between w-full">
             <span>{t('select_police_station')}</span> 
             <svg
@@ -169,11 +169,11 @@ const Carousel = () => {
           )}
         </div>
 
-        <div className="w-full absolute bottom-20 left-[5%] flex justify-center">
-          <div className=" w-[70%]  z-10 flex items-center justify-center ">
-            <div className="flex w-full border-1">
-              <div className="w-[172px] h-[48px]  text-base bg-orange-600 rounded-l-full font-extrabold leading-7 text-center align-middle">
-                <h5 className="flex items-center justify-center h-full text-white">{t('headline')}</h5>
+        <div className=" absolute bottom-[35%] md:bottom-20 left-[5%] w-[90%] flex justify-center">
+          <div className=" md:w-[70%]  z-10 flex items-center justify-center ">
+            <div className="flex w-full  border-1">
+              <div className="w-[172px] h-[48px] px-3 text-base bg-orange-600 rounded-l-full font-extrabold leading-7 text-center align-middle">
+                <h5 className="flex items-center text-white justify-center h-full">{t('headline')}</h5>
               </div>
               <div className="flex items-center justify-center w-full text-center text-black bg-white rounded-r-full h-50">
                 <marquee>

@@ -107,9 +107,9 @@ export default function BestServices() {
   ];
   return (
     <>
-      <div className="text-center bg-green-50">
-        <div className="mb-10 pt-10 md:text-3xl font-extrabold leading-9 text-[24px] text-[#15233E]">
-          {t('our_best_services')}
+      <div className="text-center -mt-64 md:mt-0 bg-green-50">
+        <div className="mb-10 -mt-48 md:mt-0 md:pt-10 md:text-3xl font-extrabold leading-9 text-[24px] text-[#15233E]">
+        {t('our_best_services')}
         </div>
         <div className="flex justify-center w-full p-3">
           <div className="flex justify-center md:w-3/12 w-[138px] lg:w-3/12 mx-2">
@@ -117,23 +117,23 @@ export default function BestServices() {
               {servicesName1.map((serviceName) => (
                 <div className="text-left md:justify-center" key={serviceName.index}>
                   <div  className={`flex  cursor-pointer justify-end`}>
-                  <div onMouseEnter={() => handleMouseEnter(serviceName.index)} onMouseLeave={handleMouseLeave} className={`mt-1 my-14 md:mx-2 md:hidden md:my-0 ${hoveredItem === serviceName.index ? "bg-sky-900" : "bg-[#E7581A] "}`}>
-                      <div  className="flex justify-center w-16 h-16 rounded-full cursor-pointer">
+                  <div  className={`mt-1 hover:text-[#E7581A] my-14 md:mx-2 md:hidden md:my-0 `}>
+                      <div  className={`flex justify-center w-16 h-16 rounded-full ${hoveredItem === serviceName.index ? "bg-sky-900" : "bg-[#E7581A] "} cursor-pointer`}>
                         <div className={`flex items-center text-white`}>
                           {serviceName.icon}
                         </div>
                       </div>
                     </div>
-                    <div className="sm:text-left md:text-right">
-                      <div className="text-[16px] md:text-[24px] lg:text-xl font-bold mt-2 ml-2 md:ml-0 md:mt-0 text-[#15233E]">
+                    <div className="sm:text-left hover:text-[#E7581A] md:text-right">
+                      <div className="text-[16px] md:text-[24px] lg:text-xl font-bold mt-2 ml-2 md:ml-0 md:mt-0 text-[#15233E] hover:text-[#E7581A]">
                         {serviceName.name}
                       </div>
-                      <div className="hidden text-xs font-normal sm:block md:text-sm text-[#15233E]">
+                      <div className="hidden text-xs font-normal sm:block md:text-sm text-[#15233E] hover:text-[#E7581A]">
                         {serviceName.message}
                       </div>
                     </div>
                     <div className="hidden mx-2 mt-1 md:block">
-                      <div  className={`flex justify-center md:w-16 md:h-16 w-[50px] h-[50px] ${hoveredItem === serviceName.index ? "bg-sky-900" : "bg-[#E7581A] "}  rounded-full cursor-pointer`}>
+                      <div  className={`flex justify-center md:w-16 md:h-16 bg-[#E7581A]  hover:bg-sky-900 w-[50px] h-[50px]   rounded-full cursor-pointer`}>
                         <div className={`flex  items-center text-white`}>
                           {serviceName.icon}
                         </div>
@@ -147,7 +147,7 @@ export default function BestServices() {
               ))}
             </div>
           </div>
-          <div className="flex justify-center mx-2 sm:w-1/12 md:w-2/12 ">
+          <div className="flex justify-center cursor-pointer mx-2 sm:w-1/12 md:w-2/12 ">
             <Image
               src="/bestService_img.png"
               width={200}
@@ -156,23 +156,23 @@ export default function BestServices() {
               alt="Picture of the Police Officer"
             />
           </div>
-          <div className="flex justify-center md:w-3/12 w-[138px] lg:w-3/12 mx-2 ">
+          <div className="flex justify-center hover:text-[#E7581A] cursor-pointer md:w-3/12 w-[138px] lg:w-3/12 mx-2 ">
             <div>
               {servicesName2.map((serviceName) => (
                 <div className="justify-center " key={serviceName.index}>
-                  <div className="flex">
+                  <div className="flex ">
                     <div className="mx-2 mt-1 my-14 md:my-0">
-                      <div className="flex justify-center w-16 h-16 bg-orange-500 rounded-full cursor-pointer hover:bg-sky-900">
+                      <div className="flex justify-center w-16 h-16 bg-[#E7581A] rounded-full cursor-pointer hover:bg-sky-900">
                         <div className="flex items-center text-white">
                           {serviceName.icon}
                         </div>
                       </div>
                     </div>
-                    <div className="text-left">
-                      <div className="text-[16px] md:text-xl font-bold mt-2 ml-2 md:ml-0 md:mt-0 text-[#15233E]">
+                    <div className="text-left hover:text-[#E7581A]">
+                      <div className="text-[16px] md:text-xl font-bold mt-2 ml-2 md:ml-0 md:mt-0 text-[#15233E] hover:text-[#E7581A]">
                         {serviceName.name}
                       </div>
-                      <div className="hidden text-xs md:text-sm font-normal sm:block md:text-[16px] text-[#15233E]">
+                      <div className="hidden text-xs md:text-sm font-normal sm:block md:text-[16px] text-[#15233E] hover:text-[#E7581A]">
                         {serviceName.message}
                       </div>
                     </div>
