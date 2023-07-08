@@ -5,8 +5,12 @@ import { AiOutlineApple } from "react-icons/ai";
 import { AiOutlineAndroid } from "react-icons/ai";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+import { useTranslation} from "react-i18next";
 
 function Footer() {
+
+  const { t } = useTranslation();
+  
   const marqueeComp = [
     { image1: "/digitalIndia_img.png" },
     { image2: "/G20_img.png" },

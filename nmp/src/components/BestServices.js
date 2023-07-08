@@ -12,10 +12,13 @@ import { BsCheck2Square, BsQuestionSquare } from "react-icons/bs";
 import { IoMdWallet } from "react-icons/io";
 import { BiMessageDetail } from "react-icons/bi";
 import { useState } from "react";
+import { useTranslation} from "react-i18next";
 
 export default function BestServices() {
-  const [hoveredItem, setHoveredItem] = useState(null);
 
+  const { t } = useTranslation();
+
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleMouseEnter = (index) => {
     setHoveredItem(index);
@@ -28,38 +31,38 @@ export default function BestServices() {
   const servicesName1 = [
     {
       index: 1,
-      name: "Police Recruitment",
-      message: "Join the Force: Empower Communities, Serve with Pride!",
+      name: t('police_recruitments'),
+      message: t('police_recruitment_msg'),
       icon: <GiPoliceOfficerHead size={35} style={{ color: "white" }} />,
     },
     {
       index: 2,
-      name: "Press Release",
-      message: "Strengthening Communities, Informing Press, Securing Trust",
+      name: t('press_release'),
+      message: t('press_release_msg'),
       icon: <LuNewspaper size={35} />,
     },
     {
       index: 3,
-      name: "Passport Status",
-      message: "Stay Informed, Stay Confident: Track Your Passport Progress",
+      name: t('passport_status'),
+      message: t('passport_msg'),
       icon: <FaPassport size={35} />,
     },
     {
       index: 4,
-      name: "Laudspeaker Permission",
-      message: "Amplifying Safety: Empowering Communities, Ensuring Peace",
+      name: t('loudspeaker_permission'),
+      message: t('laudspeaker_msg'),
       icon: <HiSpeakerphone size={35} />,
     },
     {
       index: 5,
-      name: "Accident Compensation",
-      message: "Comensation of Accident",
+      name: t('accident_compensation'),
+      message: t('accident_msg'),
       icon: <AiFillFileAdd size={35} />,
     },
     {
       index: 6,
-      name: "Unindentified Dead Bodies",
-      message: "Un-identified dead boadies",
+      name: t('unidentified_dead_bodies'),
+      message: t('dead_bodies_msg'),
       icon: <GiDeadlyStrike size={35} />,
     },
   ];
@@ -67,46 +70,46 @@ export default function BestServices() {
   const servicesName2 = [
     {
       index: 7,
-      name: "DCP Visits",
-      message: "Bridging the Gap between Police and Society",
+      name: t('dcp_visits'),
+      message: t('dcp_visit_msg'),
       icon: <TbUserSearch size={35} />,
     },
     {
       index: 8,
-      name: "Police Clearance",
-      message: "Seamless Clearance Solutions: Empowering Trust,Securing Lives",
+      name: t('police_clearance'),
+      message: t('police_clearance_msg'),
       icon: <BsCheck2Square size={35} />,
     },
     {
       index: 9,
-      name: "GRAS Payment",
-      message: "Empowering with Hassle-Free Transactions",
+      name: t('gras_payment'),
+      message: t('gras_payment_msg'),
       icon: <IoMdWallet size={35} />,
     },
     {
       index: 10,
-      name: "Inform Us/ Feedback",
-      message: "Our Voice, Our Strength: Empowering Together",
+      name: t('feedback'),
+      message: t('feedback_msg'),
       icon: <BiMessageDetail size={35} />,
     },
     {
       index: 11,
-      name: "Stolen & Unclaimed Vehicle",
-      message: "Track, Trace, and Retrieve",
+      name: t('stolan_vehicle'),
+      message: t("stolan_vehicle"),
       icon: <FaCarCrash size={35} />,
     },
     {
       index: 12,
-      name: "Missing Persons",
-      message: "Reuniting Hearts,Restoring Hope",
+      name: t('missing_person'),
+      message: t('missing_person_msg'),
       icon: <BsQuestionSquare size={35} />,
     },
   ];
   return (
     <>
-      <div className="text-center  bg-green-50">
+      <div className="text-center bg-green-50">
         <div className="mb-10 pt-10 md:text-3xl font-extrabold leading-9 text-[24px] text-[#15233E]">
-          Our Best Services
+          {t('our_best_services')}
         </div>
         <div className="flex justify-center w-full p-3">
           <div className="flex justify-center md:w-3/12 w-[138px] lg:w-3/12 mx-2">

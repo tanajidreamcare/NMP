@@ -3,8 +3,12 @@
 import { ImFacebook2 } from "react-icons/im";
 import { FaTwitterSquare } from "react-icons/fa";
 import { GrUpdate } from "react-icons/gr";
+import { useTranslation} from "react-i18next";
 
 export default function SocialMedia() {
+
+  const { t } = useTranslation();
+
   const startScroll = () => {
     const marquee = document.getElementById("scroll_news");
     marquee.start();
@@ -19,7 +23,7 @@ export default function SocialMedia() {
       {/* <Try /> */}
       <div className="bg-zinc-500 md:bg-[url('/social_bg_img.png')] py-5">
         <div className="mx-20 mt-5 text-[24px] md:text-4xl font-extrabold md:justify-center md:flex text-white md:text-white">
-          Social Media Feeds
+          {t('social_media')}
         </div>
         <div className="items-center justify-center md:flex">
           <div className="justify-end mx-3 mt-10 md:mt-0 md:flex md:w-4/12">
@@ -73,7 +77,7 @@ export default function SocialMedia() {
                 <GrUpdate size={35}/>
               </div>
               <hr className="border-2 border-solid" />
-              <div className="my-3 font-bold text-center">Latest Update</div>
+              <div className="my-3 font-bold text-center">{t('latest_update')}</div>
               <div>
                 <marquee
                   direction="up"

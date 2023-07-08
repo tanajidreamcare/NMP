@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useTranslation} from "react-i18next";
 
 const Carousel = () => {
+
+  const { t } = useTranslation();
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [isDropDownOpen, setisDropDownOpen] = useState(false);
@@ -20,10 +24,10 @@ const Carousel = () => {
 
 
   return (
-    <div className="relative w-full-mt-10 p-0 ">
+    <div className="relative p-0 w-full-mt-10 ">
 
 
-      <div className="h-full w-full mt-10">
+      <div className="w-full h-full mt-10">
 
         <iframe className="rep" width="560" height="315" src="https://www.youtube-nocookie.com/embed/EoYWwSalaJ4?autoplay=1&loop=1&playlist=EoYWwSalaJ4&mute=1&controls=0&rel=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         {/* <BackgroundVideo /> */}
@@ -40,8 +44,8 @@ const Carousel = () => {
           </div>
           <div className="flex justify-center">
             <div className="z-10 flex items-center justify-center py-6 bg-transparent">
-              <ul className="space-y-2 z-30 ">
-                <li className="border-b-4 cursor-pointer text-white  ">
+              <ul className="z-30 space-y-2 ">
+                <li className="text-white border-b-4 cursor-pointer ">
                   <div className="flex justify-center">
                     <Image
                       src="/emergency_img.png"
@@ -52,10 +56,10 @@ const Carousel = () => {
                     />
                   </div>
                   <h1 className="w-full mb-4 text-center hover:text-[#EB1815] ">
-                    Emergency
+                    {t('emergency')}
                   </h1>
                 </li>
-                <li className="border-b-4 cursor-pointer text-white">
+                <li className="text-white border-b-4 cursor-pointer">
                   <div className="flex justify-center">
                     <Image
                       src="/traffic_img.png"
@@ -66,11 +70,11 @@ const Carousel = () => {
                     />
                   </div>
                   <h1 className="w-full  mb-4 text-center hover:text-[#EB1815]">
-                    Traffic branch
+                    {t('traffic_branch')}
                   </h1>
                 </li>
 
-                <li className="border-b-4 cursor-pointer text-white">
+                <li className="text-white border-b-4 cursor-pointer">
                   <div className="flex justify-center">
                     <Image
                       src="/passport_img.png"
@@ -81,11 +85,11 @@ const Carousel = () => {
                     />
                   </div>
                   <h1 className="w-full mb-4 text-center hover:text-[#EB1815]">
-                    Passport Branch
+                    {t('passport_status')}
                   </h1>
                 </li>
 
-                <li className="border-b-4 cursor-pointer text-white">
+                <li className="text-white border-b-4 cursor-pointer">
                   <div className="flex justify-center">
                     <Image
                       src="/crime_img.png"
@@ -96,11 +100,11 @@ const Carousel = () => {
                     />
                   </div>
                   <h1 className="w-full mb-4 text-center hover:text-[#EB1815]">
-                    Crime Branch
+                    {t('crime_branch')}
                   </h1>
                 </li>
 
-                <li className="border-b-4 cursor-pointer text-white ">
+                <li className="text-white border-b-4 cursor-pointer ">
                   <div className="flex justify-center">
                     <Image
                       src="/citizen_img.png"
@@ -111,7 +115,7 @@ const Carousel = () => {
                     />
                   </div>
                   <h1 className="w-full mb-4 text-center min-w-fit hover:text-[#EB1815]">
-                    Citizen Portal
+                    {t('citizen_corner')}
                   </h1>
                 </li>
               </ul>
@@ -122,7 +126,7 @@ const Carousel = () => {
 
         <div className="absolute top-[60%] left-[42%] w-[25%] bg-white border-[1px] border-[#E7581A] rounded-2xl py-2 px-4 z-20">
           <button onClick={toggleDropdown} className="dropdown-toggle text-[#E7581A] flex justify-between w-full">
-            <span>Nearest Police Statioin</span> 
+            <span>{t('select_police_station')}</span> 
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className={`h-4 w-4 text-[#E7581A] transition-transform ${toggleDropdown ? "" : "rotate-180"
@@ -140,23 +144,40 @@ const Carousel = () => {
               </svg>
           </button>
           {isDropDownOpen && (
-            <ul className="dropdown-menu text-[#E7581A]">
-              <li>Option 1</li>
-              <li>Option 2</li>
-              <li>Option 3</li>
+            <ul cclassName="cursor-pointer hover:text-[#E7581A]"lassName="dropdown-menu text-[#15233E] ">
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('apmc')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('cbd_belapur')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('kalamboli')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('kamothe')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('khandeshwar')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('kharghar')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('kopar_khairane')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('mora_sagari')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('nerul')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('nhava_sheva')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('nri')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('panvel')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('panvel_taluka')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('rabale')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('rabale_midc')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('sanpada')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('taloja')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('turbhe')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('uran')}</li>
+              <li className="cursor-pointer hover:text-[#E7581A]">{t('washi')}</li>
             </ul>
           )}
         </div>
 
         <div className="w-full absolute bottom-20 left-[5%] flex justify-center">
           <div className=" w-[70%]  z-10 flex items-center justify-center ">
-            <div className="flex w-full  border-1">
+            <div className="flex w-full border-1">
               <div className="w-[172px] h-[48px]  text-base bg-orange-600 rounded-l-full font-extrabold leading-7 text-center align-middle">
-                <h5 className="flex items-center text-white justify-center h-full">Headline</h5>
+                <h5 className="flex items-center justify-center h-full text-white">{t('headline')}</h5>
               </div>
-              <div className="flex items-center w-full justify-center text-center text-black  h-50 bg-white rounded-r-full">
+              <div className="flex items-center justify-center w-full text-center text-black bg-white rounded-r-full h-50">
                 <marquee>
-                  <p className="text-base font-medium">Headline 1, headline 2, headline 3</p>
+                  <p className="text-base font-medium">{t('headline1')} | {t('headline2')} | {t('headline3')} | {t('headline4')}</p>
                 </marquee>
               </div>
             </div>

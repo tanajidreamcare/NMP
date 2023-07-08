@@ -3,7 +3,8 @@ import { useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi"
-import { FaWindowClose } from "react-icons/fa"
+import { FaWindowClose } from "react-icons/fa";
+import { useTranslation} from "react-i18next";
 
 const images = [
   { path: "/gallery/farariPathak_img.jpg", prop: "w-[32.91%] h-[53.88%] top-0 left-0", title: "दि. ०९/०५/२०२३ पासून मा. पोलीस आयुक्त सो. व पोलीस सहआयुक्त  यांनी पाहिजे व फरारी आरोपीचे पथक स्थापन केले होते. सदर पथकाने नवी मुंबई पोलीस आयुक्तालयातील पाहिजे २९ व फरारी १० असे एकूण ३९ आरोपी यांचा शोध लावला." },
@@ -18,13 +19,12 @@ const images = [
   { path: "/gallery/ChhShivajiMaharaj.jpg", prop: "w-[32.91%] h-[42.08%] bottom-0 left-0", title: "छत्रपती शिवाजी महाराज यांच्या जयंतीनिमित्त विनम्र अभिवादन! #Shivjayanti2023#शिवजयंती" },
   { path: "/gallery/inaugurationCeremony.jpg", prop: "w-[28.66%] h-[34.44%] bottom-0 left-[37%]", title: "महिला पोलीस अंमलदारांना उद्घाटनाचा मान कोपरखैरणे इथल्या वाहतूक कार्यालयाच्या नुतनीकरणाच्या उद्घाटनाचा मान " },
   { path: "/gallery/shrutiUPSC.jpg", prop: "w-[30.57%] h-[53.88%] bottom-0 right-0", title: "नवी मुंबई पोलीस दलातील वरिष्ठ पोलीस निरीक्षक सुभाष कोकाटे  यांची  कन्या श्रुती सुभाष कोकाटे यांनी केंद्रीय लोकसेवा आयोग (UPSC) परीक्षेत यश संपादन केल्याबद्दल  मा. पोलीस  आयुक्त श्री मिलिंद भारबे  सो.  यांनी त्यांचा सत्कार करून पुढील वाटचालीस शुभेच्छा दिल्या." },
-  // {path: "/gal_img1.png"},
-  // {path: "/gal_img2.png"},
-  // {path:"/gal_img3.png"},
-  // {path: "/gal_img4.png"},
 ];
 
 const Gallery = () => {
+
+  const { t } = useTranslation();
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentPage, setCurrentPage] = useState(0);
   const imagesPerPage = 6;
@@ -62,7 +62,7 @@ const Gallery = () => {
       <div className="">
         <div className="text-center " id="gallery">
           <h1 className="mt-12 mb-8 text-3xl font-bold text-black">
-            Gallery
+            {t('photo_gallery')}
           </h1>
         </div>
         <div className="h-screen ">
