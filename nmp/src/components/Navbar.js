@@ -140,20 +140,23 @@ const Navbar = () => {
   return (
     <nav className="fixed z-30 flex items-center justify-between w-full px-2 -mt-10 bg-white">
       <div className="flex items-center">
+        <a href="#">
         <img
           src="/logo.png"
           alt="Logo"
           className="w-[50px] h-[50px] mr-2"
         />
-        <h1 className="mx-1 text-[1.4em]  md:w-auto font-semibold leading-[36px] text-sky-900">
+        </a>
+        
+        <a href="#" className="mx-1 text-[1.4em]  md:w-auto font-semibold leading-[36px] text-sky-900 hover:text-[#E7581A]">
           {t('navi_mumbai_police')}
-        </h1>
+        </a>
       </div>
 
       <div className="flex items-center justify-around md:mt-0">
         <div className="justify-around hidden md:flex">
           <ul className="flex flex-col mt-[2px] text-[1em] w-11/12 mr-5 space-y-2 md:flex-row md:space-y-0 md:space-x-4 text-sky-900">
-            <li className="inline-flex font-medium leading-[28px] cursor-pointer">
+            <li className="inline-flex font-medium leading-[28px] cursor-pointer hover:text-[#E7581A]">
               {t('home')}
             </li>
             <li onMouseEnter={() => setaboutUsToggle(true)} onMouseLeave={() => setaboutUsToggle(false)} className={`relative ${aboutUsToggle ? "hover:text-[#E7581A]" : ""} inline font-medium leading-[28px] cursor-pointer`}>
@@ -162,7 +165,9 @@ const Navbar = () => {
                 <div className="absolute z-50 -left-5">
                   <ul className="text-black bg-white px-6 py-2 border-[1px]  rounded-lg">
                     {aboutUs.map((about, i) => (
-                      <li className="hover:text-[#E7581A] w-48" key={i}>{about.title}</li>
+                      <a href="#">
+                        <li className="hover:text-[#E7581A] w-48" key={i}>{about.title}</li>
+                      </a>
                     ))}
                   </ul>
                 </div>
@@ -394,16 +399,16 @@ const Navbar = () => {
           </button>
 
           {isMenuOpen && (
-            <div className="absolute top-12 w-full h-screen right-0  overflow-scroll  border-b border-gray-200">
-              <ul className="text-left px-6 pb-6 items-center ml-28 pt-20 overflow-auto bg-white  text-black text-lg">
-                <li className="px-8 py-4 cursor-pointer h-full hover:bg-white">
+            <div className="absolute right-0 w-full h-screen overflow-scroll border-b border-gray-200 top-12">
+              <ul className="items-center px-6 pt-20 pb-6 overflow-auto text-lg text-left text-black bg-white ml-28">
+                <li className="h-full px-8 py-4 cursor-pointer hover:bg-white">
                   {t('home')}
                 </li>
                 <li onClick={() => setaboutUsMobile(!aboutUsMobile)} className="px-8 py-4">
                  <div  className="flex"> <span className="pr-12">{t('about_us')}</span> {aboutUsMobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
                   {aboutUsMobile &&
-                    <div className=" h-full w-full ml-6 text-sm  mt-2">
-                      <ul className="  rounded-lg ">
+                    <div className="w-full h-full mt-2 ml-6 text-sm ">
+                      <ul className="rounded-lg ">
                         {aboutUs.map((about, i) => (
                           <><li className="py-2 " key={i}>{about.title}</li></>
                         ))}
@@ -414,8 +419,8 @@ const Navbar = () => {
                 <li onClick={() => setreportUsMobile(!reportUsMobile)} className="px-8 py-4">
                  <div  className="flex"> <span className="pr-10">{t('report_us')}</span> {reportUsMobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
                   {reportUsMobile &&
-                    <div className="h-full w-full ml-6 text-sm  mt-2">
-                      <ul className="  rounded-lg ">
+                    <div className="w-full h-full mt-2 ml-6 text-sm">
+                      <ul className="rounded-lg ">
                         {ReportUs.map((about, i) => (
                           <><li className="py-2 " key={i}>{about.title}</li></>
                         ))}
@@ -427,8 +432,8 @@ const Navbar = () => {
                 <li onClick={() => setSpecialUnits1Mobile(!SpecialUnits1Mobile)} className="px-8 py-4">
                 <div  className="flex"> <span className="pr-4">{t('special_units')}</span> {SpecialUnits1Mobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
                   {SpecialUnits1Mobile &&
-                    <div className="h-full w-full ml-6 text-sm  mt-2">
-                      <ul className=" rounded-lg ">                        
+                    <div className="w-full h-full mt-2 ml-6 text-sm">
+                      <ul className="rounded-lg ">                        
                       {SpecialUnits1.map((special, i) => (
                         <li className="py-2" key={i}>{special.title}</li>
                       ))}
@@ -445,11 +450,11 @@ const Navbar = () => {
                     </div>
                   }
                 </li>
-                <li onClick={() => setCitizenCornerMobile(!CitizenCornerMobile)} className="px-8 py-4  ">
+                <li onClick={() => setCitizenCornerMobile(!CitizenCornerMobile)} className="px-8 py-4 ">
                 <div  className="flex"> <span className="pr-1">{t('citizen_corner')}</span> {CitizenCornerMobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
                   {CitizenCornerMobile &&
-                    <div className="h-full w-full ml-6 text-sm  mt-2">
-                      <ul className=" rounded-lg ">
+                    <div className="w-full h-full mt-2 ml-6 text-sm">
+                      <ul className="rounded-lg ">
                       {CitizenCorner.map((special, i) => (
                         <li className="py-2" key={i}>{special.title}</li>
                       ))}
@@ -463,7 +468,7 @@ const Navbar = () => {
                 <li onClick={() => setPoliceCornerMobile(!PoliceCornerMobile)} className="px-8 py-4">
                 <div  className="flex"> <span className="pr-3">{t('police_corner')}</span> {PoliceCornerMobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
                   {PoliceCornerMobile &&
-                    <div className="h-full w-full ml-6 text-sm  mt-2">
+                    <div className="w-full h-full mt-2 ml-6 text-sm">
                     <ul className="rounded-lg ">
                       {PoliceCorner.map((report, i) => (
                       <li className="py-2" key={i}>{report.title}</li>
@@ -475,8 +480,8 @@ const Navbar = () => {
                 <li onClick={() => setContactUsMobile(!ContactUsMobile)} className="px-8 py-4 mb-3">
                 <div  className="flex"> <span className="pr-8">{t('contact_us')}</span> {ContactUsMobile ?<IoMdArrowDropup size={30}/> :<IoMdArrowDropdown size={30}/>} </div>
                   {ContactUsMobile &&
-                    <div className="h-full w-full ml-6 text-sm  mt-2">
-                    <ul className=" rounded-lg ">
+                    <div className="w-full h-full mt-2 ml-6 text-sm">
+                    <ul className="rounded-lg ">
                       {ContactUs.map((report, i) => (
                       <li className="py-2" key={i}>{report.title}</li>
                     ))}

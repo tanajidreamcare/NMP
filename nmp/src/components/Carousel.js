@@ -24,7 +24,7 @@ const Carousel = () => {
 
 
   return (
-    <div className="relative w-full  p-0 ">
+    <div className="relative w-full p-0 ">
 
 
       <div className="relative md:block pb-[50%] md:pb-0 w-full mt-10" >
@@ -43,9 +43,9 @@ const Carousel = () => {
             />
           </div>
           <div className="flex bg-[#15233EAD] md:h-full  justify-center ">
-            <div className="z-10 flex  justify-center py-6 bg-transparent">
-              <ul className="space-y-2 z-20 mt-8">
-                <li className="border-b-4 cursor-pointer text-white  ">
+            <div className="z-10 flex justify-center py-6 bg-transparent">
+              <ul className="z-20 mt-8 space-y-2">
+                <li className="text-white border-b-4 cursor-pointer ">
                   <div className="flex justify-center">
                     <Image
                       src="/emergency_img.png"
@@ -104,7 +104,7 @@ const Carousel = () => {
                   </h1>
                 </li>
 
-                <li className=" cursor-pointer text-white ">
+                <li className="text-white cursor-pointer ">
                   <div className="flex justify-center">
                     <Image
                       src="/citizen_img.png"
@@ -144,8 +144,9 @@ const Carousel = () => {
               </svg>
           </button>
           {isDropDownOpen && (
-            <ul cclassName="cursor-pointer hover:text-[#E7581A]"lassName="dropdown-menu text-[#15233E] ">
-              <li className="cursor-pointer hover:text-[#E7581A]">{t('apmc')}</li>
+            <ul className="dropdown-menu">
+              <a href="#"><li className="cursor-pointer hover:text-[#E7581A]">{t('apmc')}</li></a>
+              
               <li className="cursor-pointer hover:text-[#E7581A]">{t('cbd_belapur')}</li>
               <li className="cursor-pointer hover:text-[#E7581A]">{t('kalamboli')}</li>
               <li className="cursor-pointer hover:text-[#E7581A]">{t('kamothe')}</li>
@@ -171,9 +172,9 @@ const Carousel = () => {
 
         <div className=" absolute bottom-[35%] md:bottom-20 left-[5%] w-[90%] flex justify-center">
           <div className=" md:w-[70%]  z-10 flex items-center justify-center ">
-            <div className="flex w-full  border-1">
+            <div className="flex w-full border-1">
               <div className="w-[172px] h-[48px] px-3 text-base bg-orange-600 rounded-l-full font-extrabold leading-7 text-center align-middle">
-                <h5 className="flex items-center text-white justify-center h-full">{t('headline')}</h5>
+                <h5 className="flex items-center justify-center h-full text-white">{t('headline')}</h5>
               </div>
               <div className="flex items-center justify-center w-full text-center text-black bg-white rounded-r-full h-50">
                 <marquee>
