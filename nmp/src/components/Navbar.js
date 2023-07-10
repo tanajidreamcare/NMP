@@ -22,8 +22,18 @@ const Navbar = () => {
   const [PoliceCornerMobile, setPoliceCornerMobile] = useState(false)
   const [ContactUsMobile, setContactUsMobile] = useState(false)
 
+  const [currentLang, setCurrentLang] = useState("");
   const KEY = "selectedLanguage"
-  const [currentLang, setCurrentLang] = useState(localStorage.getItem(KEY) || 'en');
+  const getKey = () => {
+    return localStorage.getItem(KEY) || "en";
+  };
+
+  useEffect(() => {
+    // Get the key from local storage
+    const key = getKey();
+    setCurrentLang(key);
+  }, []);
+
 
   useEffect(()=>{
     i18n.changeLanguage(currentLang);
@@ -165,7 +175,7 @@ const Navbar = () => {
                 <div className="absolute z-50 -left-5">
                   <ul className="text-black bg-white px-6 py-2 border-[1px]  rounded-lg">
                     {aboutUs.map((about, i) => (
-                      <a href="#">
+                      <a key={i} href="#">
                         <li className="hover:text-[#E7581A] w-48" key={i}>{about.title}</li>
                       </a>
                     ))}
