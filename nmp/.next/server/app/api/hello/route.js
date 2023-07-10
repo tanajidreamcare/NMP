@@ -12,7 +12,7 @@ module.exports = require("os");
 
 /***/ }),
 
-/***/ 7477:
+/***/ 3684:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -46,7 +46,7 @@ async function GET(request) {
     return new Response("Hello, Next.js!");
 }
 
-;// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fapi%2Fhello%2Froute&name=app%2Fapi%2Fhello%2Froute&pagePath=private-next-app-dir%2Fapi%2Fhello%2Froute.js&appDir=D%3A%5CDream%20Care%5CMumbai%20Police%5Ctanaji%5CNMP%5Cnmp%5Csrc%5Capp&appPaths=%2Fapi%2Fhello%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!
+;// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?page=%2Fapi%2Fhello%2Froute&name=app%2Fapi%2Fhello%2Froute&pagePath=private-next-app-dir%2Fapi%2Fhello%2Froute.js&appDir=D%3A%5CNavi%20Mumbai%20Police%5CNMP%5Cnmp%5Csrc%5Capp&appPaths=%2Fapi%2Fhello%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!
 
     
 
@@ -54,7 +54,7 @@ async function GET(request) {
 
     
 
-    const options = {"definition":{"kind":"APP_ROUTE","page":"/api/hello/route","pathname":"/api/hello","filename":"route","bundlePath":"app/api/hello/route"},"resolvedPagePath":"D:\\Dream Care\\Mumbai Police\\tanaji\\NMP\\nmp\\src\\app\\api\\hello\\route.js","nextConfigOutput":""}
+    const options = {"definition":{"kind":"APP_ROUTE","page":"/api/hello/route","pathname":"/api/hello","filename":"route","bundlePath":"app/api/hello/route"},"resolvedPagePath":"D:\\Navi Mumbai Police\\NMP\\nmp\\src\\app\\api\\hello\\route.js","nextConfigOutput":""}
     const routeModule = new (module_default())({
       ...options,
       userland: route_namespaceObject,
@@ -84,7 +84,7 @@ async function GET(request) {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [763,981], () => (__webpack_exec__(7477)));
+var __webpack_exports__ = __webpack_require__.X(0, [763,981], () => (__webpack_exec__(3684)));
 module.exports = __webpack_exports__;
 
 })();
