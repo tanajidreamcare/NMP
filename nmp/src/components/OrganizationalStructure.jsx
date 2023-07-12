@@ -28,7 +28,7 @@ const OrganizationalStructure = () => {
         >
           <TreeNode
             label={
-              <StyledNode>Jr. Commissioner of Police Navi Mumbai</StyledNode>
+              <StyledNode>Jt. Commissioner of Police Navi Mumbai</StyledNode>
             }
           >
             <TreeNode label={<StyledNode>DCP Zone 1</StyledNode>}>

@@ -19,6 +19,9 @@ import ContactUs from '../components/ContactUs';
 import PoliceMap from "../components/PoliceMap";
 import OrganizationalStructure from "../components/OrganizationalStructure";
 import LostFound from "../components/LostFound";
+import InformUsFeedback from "../components/InformUsFeedback";
+import OurMission from "../components/OurMission";
+import Responsibilities from "../components/Responsibilities";
 
 i18n
   .use(initReactI18next)
@@ -63,7 +66,11 @@ export default function Home() {
     {/* <PoliceMap/> */}
     {/* <ContactUs/> */}
     {/* <OrganizationalStructure/> */}
-    <LostFound/>
+    {/* <LostFound/> */}
+    {/* <InformUsFeedback/> */}
+    {/* <OurMission/> */}
+    <Responsibilities/>
+
     </>
   )
 };
