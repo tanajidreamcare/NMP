@@ -1,10 +1,7 @@
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { FiTwitter } from "react-icons/fi";
-import { AiOutlineApple } from "react-icons/ai";
-import { AiOutlineAndroid } from "react-icons/ai";
 import Marquee from "react-fast-marquee";
-import Image from "next/image";
 import { useTranslation} from "react-i18next";
 
 function Footer() {
@@ -209,7 +206,7 @@ function Footer() {
                 <div className="me-[48px] cursor-pointer">
                   {t('unidentified_dead_bodies')}
                 </div>
-                <div className="me-[48px] cursor-pointer">{t('useful_websites')}</div>
+                <div className="me-[48px] cursor-pointer">{t('useful_website')}</div>
                 <div className="me-[48px] cursor-pointer">{t('emergency_contacts')}</div>
               </div>
             </div>
@@ -218,7 +215,7 @@ function Footer() {
         </div>
         <div className="mx-16 mt-6 md:flex md:justify-between">
           <div className="flex ">
-            <div className="me-2">{t('foloow_us')}</div>
+            <div className="me-2">{t('follow_us')}</div>
             <div className="rounded-full p-1 mx-1 border-[1px] border-white">
               <AiOutlineInstagram />
             </div>

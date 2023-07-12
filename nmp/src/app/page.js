@@ -12,7 +12,13 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import engTrans from "../locales/english.json";
 import marTrans from "../locales/marathi.json";
-
+import PoliceOfficer from '../components/seniorPoliceOfficer';
+import DivisionalACP from "../components/DivisionalACP";
+import Martyrs from "../components/Martyrs";
+import ContactUs from '../components/ContactUs';
+import PoliceMap from "../components/PoliceMap";
+import OrganizationalStructure from "../components/OrganizationalStructure";
+import LostFound from "../components/LostFound";
 
 i18n
   .use(initReactI18next)
@@ -42,14 +48,22 @@ export default function Home() {
     <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
-    <Navbar/>
-    <Carousel/>
-    <BestServices/>
-    <CPMessage/>
-    <SocialMedia/>
-    <Gallery/>
-    <Footer/>
-    <Twitter/>
+      
+    {/* <Navbar/> */}
+    {/* <Carousel/> */}
+    {/* <BestServices/> */}
+    {/* <CPMessage/> */}
+    {/* <SocialMedia/> */}
+    {/* <Gallery/> */}
+    {/* <Footer/> */}
+    {/* <Twitter/> */}
+    {/* <PoliceOfficer/> */}
+    {/* <DivisionalACP/> */}
+    {/* <Martyrs/> */}
+    {/* <PoliceMap/> */}
+    {/* <ContactUs/> */}
+    {/* <OrganizationalStructure/> */}
+    <LostFound/>
     </>
   )
-}
+};
