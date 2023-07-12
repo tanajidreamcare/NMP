@@ -22,6 +22,8 @@ import LostFound from "../components/LostFound";
 import InformUsFeedback from "../components/InformUsFeedback";
 import OurMission from "../components/OurMission";
 import Responsibilities from "../components/Responsibilities";
+import Hierarchy from "../components/Hierarchy";
+import PressRelease from "../components/PressRelease";
 
 i18n
   .use(initReactI18next)
@@ -69,8 +71,9 @@ export default function Home() {
     {/* <LostFound/> */}
     {/* <InformUsFeedback/> */}
     {/* <OurMission/> */}
-    <Responsibilities/>
-
+    {/* <Responsibilities/> */}
+    {/* <Hierarchy/> */}
+    <PressRelease/>
     </>
   )
 };
